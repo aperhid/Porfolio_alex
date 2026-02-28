@@ -1,6 +1,8 @@
 <script lang="ts" setup>
+import { ArrowUp } from 'lucide-vue-next'
 
-//import { Button } from '@/components/ui/button'
+import Button from '@/components/ui/button/Button.vue';
+
 import {
   Card,
   CardContent,
@@ -37,8 +39,8 @@ const scrollToSection = (sectionId: string) => {
                     <NavigationMenuList class="flex flex-col ml-5 sm:flex-row">
                         
                     <NavigationMenuItem>
-                        <a href="#" @click.prevent="scrollToSection('#')">
-                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'bg-transparent hover:bg-transparent hover:font-bold px-5']">
+                        <a href="#" @click.prevent="scrollToSection('#porfolio')">
+                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-white bg-transparent hover:text-white hover:scale-105 hover:bg-transparent hover:underline transition-all']">
                              Inicio   
                             </NavigationMenuLink>
                         </a>
@@ -46,7 +48,7 @@ const scrollToSection = (sectionId: string) => {
 
                     <NavigationMenuItem>
                         <a href="#" @click.prevent="scrollToSection('#trabajos')">
-                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'bg-transparent hover:bg-transparent hover:font-bold']">
+                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-white bg-transparent hover:text-white hover:scale-105 hover:bg-transparent hover:underline transition-all']">
                              Trabajos    
                             </NavigationMenuLink>
                         </a>
@@ -54,7 +56,7 @@ const scrollToSection = (sectionId: string) => {
 
                     <NavigationMenuItem>
                         <a href="#" @click.prevent="scrollToSection('#información')">
-                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'bg-transparent hover:bg-transparent hover:font-bold']">
+                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-white bg-transparent hover:text-white hover:scale-105 hover:bg-transparent hover:underline transition-all']">
                              Información    
                             </NavigationMenuLink>
                         </a>
@@ -62,7 +64,7 @@ const scrollToSection = (sectionId: string) => {
 
                     <NavigationMenuItem>
                         <a href="#" @click.prevent="scrollToSection('#contacto')">
-                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'bg-transparent hover:bg-transparent hover:font-bold']">
+                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-white bg-transparent hover:text-white hover:scale-105 hover:bg-transparent hover:underline transition-all']">
                              Contacto    
                             </NavigationMenuLink>
                         </a>
@@ -78,11 +80,14 @@ const scrollToSection = (sectionId: string) => {
                 </div>
         </nav>
 
-        <header class="título">
-                <h1>PORFOLIO</h1>
-                <div id="título-portafolio" class="fondo"> </div>
+        <section>
+            <header class="titulo">
+                <div id="titulo-portafolio" class="fondo"> </div>
                 <p>Álex Pérez Hidalgo</p>
-        </header>
+            </header>
+
+        </section>
+       
 
         <section id="trabajos">
             <div class="trabajos-fondo flex flex-col gap-8 ">
@@ -96,29 +101,48 @@ const scrollToSection = (sectionId: string) => {
                 </div>
 
                 <div class="card">
-                    <Card class="w-60 h-80 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.6)]">
-                        <CardContent>
-                            <h2 class="font-medium text-lg pointer-events-none">
-                                Ilustración
-                            </h2>
+                    <Card class="w-60 h-80 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md hover:scale-105 transition-transform">
+                        <CardContent class="flex flex-col items-center">
+                            <img class="w-48 h-42 object-cover object-top mt-2 rounded-md"
+                            src="../imagenes/Home/homer-s.png" alt="">
+                            <h1 class="mt-4 font-medium text-lg pointer-events-none text-white">
+                                DISEÑO 3D
+                            </h1>
+                     
+                                <RouterLink to="/diseño_3d"> 
+                                    <ArrowUp class="mt-4 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
+                                </RouterLink>
                         </CardContent>
-                    </Card>   
-
-                    <Card class="w-60 h-80 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.6)]">
-                        <CardContent>
-                            <h2 class="font-medium text-lg pointer-events-none">
-                                Diseño
-                            </h2>
+                    </Card> 
+                    <Card class="w-60 h-80 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md hover:scale-105 transition-transform">
+                        <CardContent class="flex flex-col items-center">
+                            <img class="w-48 h-42 object-cover object-top mt-2 rounded-md"
+                            src="../imagenes/Home/homer-s.png" alt="">
+                            <h1 class="mt-4 font-medium text-lg pointer-events-none text-white">
+                                DISEÑO GRÁFICO
+                            </h1>
+                     
+                                <RouterLink to="/diseño_gráfico"> 
+                                    <ArrowUp class="mt-4 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
+                                </RouterLink>
                         </CardContent>
                     </Card>  
 
-                    <Card class="w-60 h-80 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.6)]">
-                        <CardContent>
-                            <h2 class="font-medium text-lg pointer-events-none">
-                               Volumen
-                            </h2>
+                      <Card class="w-60 h-80 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md hover:scale-105 transition-transform">
+                        <CardContent class="flex flex-col items-center">
+                            <img class="w-48 h-42 object-cover object-top mt-2 rounded-md"
+                            src="../imagenes/Home/homer-s.png" alt="">
+                            <h1 class="mt-4 font-medium text-lg pointer-events-none text-white">
+                                ILUSTRACIÓN
+                            </h1>
+
+                                <RouterLink to="/ilustración"> 
+                                    <ArrowUp class="mt-4 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
+                                </RouterLink>
                         </CardContent>
                     </Card>  
+
+
                 </div>
                    
                  
@@ -157,34 +181,32 @@ const scrollToSection = (sectionId: string) => {
 
     .fondo {
         min-height: 100vh;
-        background-size: 100% 100%;
         background-position: center center;
-        background-image: url("../imagenes/Home/fondo degradado 1.png");
-            
+        background-image: url("../imagenes/Home/fondoo_Mesa de trabajo 1.jpg");
+        background-size: cover;  
         }
 
     .trabajos-fondo {
         min-height: 100vh;
-        background-size: 100% 100%;
+        background-size: cover;
         background-position: center center;
-        background-image: url("../imagenes/Home/fondo degradado 2.jpg");
-        position: relative;
+        background-image: url("../imagenes/Home/fondoo_Mesa de trabajo 1.jpg");
         
     }
 
     .información-fondo {
         min-height: 100vh;
-        background-size: 100% 100%;
+        background-size: auto;
         background-position: center center;
-        background-image: url("../imagenes/Home/fondo degradado 3.jpg");
+        background-image: url("../imagenes/Home/fondo03.jpg");
         
     }
 
     .contacto-fondo {
         min-height: 100vh;
-        background-size: 100% 100%;
+        background-size: auto;
         background-position: center center;
-        background-image: url("../imagenes/Home/fondo degradado 4.jpg");
+        background-image: url("../imagenes/Home/fondo04.jpg");
         
     }
 
@@ -202,7 +224,6 @@ const scrollToSection = (sectionId: string) => {
 
     }
 
-    /* tablet */
     @media (min-width: 640px) {
         .navegador {
             width: calc(100% - 40px);
@@ -210,11 +231,10 @@ const scrollToSection = (sectionId: string) => {
             margin-top: 17px;
             margin-left: 16px;
             border: 1px solid rgba(255, 255, 255, 0.4);
-            background-color: rgba(255, 255, 255, 0.15);
+            background-color: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(0.4rem);
             border-radius: 2rem 2rem 2rem 2rem;
             opacity: 1;
-
         }
     }
 
@@ -225,44 +245,45 @@ const scrollToSection = (sectionId: string) => {
             justify-content: center;
             margin-right: 50px;
             pointer-events: none;
+            color: white;
             /* poner fuente */
         }   
     }
 
     /* tocar */
-    .título > h1 { 
+    .titulo > h1 { 
         position: absolute;
         top: 40%;
         width: 100%;
         text-align: center;
         font-size: 3rem; 
-        color: white;
+        color: black;
         pointer-events:none; 
     }
 
     /* tocar */
-    .título > p {
+    .titulo > p {
         position: absolute;
         top: 60%;
         width: 100%;
         text-align: center;
         font-size: 1.5rem; 
-        color: white;
+        color: black;
         pointer-events:none; 
     }
 /* tocar */
     @media (min-width: 768px) {
-        .título > h1 { 
+        .titulo > h1 { 
             position: absolute;
             top: 40%;
             width: 100%;
             text-align: center;
             font-size: 5rem; 
-            color: white;
+            color: black;
             pointer-events:none; 
         }   
 
-        .título > p {
+        .titulo > p {
             position: absolute;
             top: 60%;
             width: 100%;
@@ -283,5 +304,8 @@ const scrollToSection = (sectionId: string) => {
         
     }
 
+    .contenidoCard {
+        
+    }
   
 </style>
