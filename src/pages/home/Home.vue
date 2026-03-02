@@ -104,17 +104,16 @@ const fecha = ref<DateValue>()
                 </div>
         </nav>
 
-        <section>
+        <section class="fondo">
             <header class="titulo">
-                <div id="titulo-portafolio" class="fondo"> </div>
+                <div id="titulo-portafolio"> </div>
                 <p>Álex Pérez Hidalgo</p>
             </header>
-
         </section>
        
 
         <section id="trabajos">
-            <div class="trabajos-fondo flex flex-col gap-8 ">
+            <div class="fondo flex flex-col gap-8">
                 <div class="texto-trabajos">
                     <h1>
                         Texto
@@ -178,7 +177,7 @@ const fecha = ref<DateValue>()
         </section>
 
         <section id="información">
-            <div class="información-fondo">
+            <div class="fondo">
 
                 <div class="card_info">
                     <Card class="w-80 h-150 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
@@ -208,13 +207,13 @@ const fecha = ref<DateValue>()
         </section>
 
         <section id="contacto">
-            <div class="contacto-fondo">
+            <div class="fondo">
 
                 <div>
                     <h2>contáctame</h2>
                 </div>
 
-                <div class="card_contacto">
+                <div class="card_contacto h-80">
                     <Card class="border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                         <CardContent>
                             <div class="w-full">
@@ -307,8 +306,8 @@ const fecha = ref<DateValue>()
                             </CardContent>
                         </Card>
 
-                        <div>
-                            <Card class="border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                        <div class="mt-5">
+                            <Card class="h-10 rounded-b-full border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                                 <CardContent>
                                     <h2>redes</h2>
                                 </CardContent>
@@ -326,13 +325,53 @@ const fecha = ref<DateValue>()
             
         </section>
 
+        <footer class="w-full bg-gray-900 text-gray-300 py-12">
+            <div class="flex flex-col md:flex-row md:justify-around gap-8 max-w-3xl mx-auto">
+
+                <div class="space-y-4 text-center md:text-left">
+                    <h3 class="text-xl font-bold text-white">
+                        Información de Contacto
+                    </h3>
+                    
+                    <div class="space-y-2">
+
+                        <p class="flex items-center gap-2 justify-center md:justify-start">
+                            <Phone class="w-5 h-5"/>
+                            +1 (555) 123-4567
+
+                        </p>
+
+                        <p class="flex items-center gap-2 justify-center md:justify-start">
+                            <Mail class="w-5 h-5"/>
+                                batman@wayneenterprises.com
+                        </p>
+
+                        <p class="flex items-center gap-2 justify-center md:justify-start">
+                            <MapPin class="w-5 h-5"/>
+                            Wayne Manor, Gotham City
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="space-y-4 text-center md:text-left text-gray-400">
+                    <h3 class="text-xl font-bold text-white">
+                        Síguenos
+                    </h3>
+
+                    <div class="flex gap-8 justify-center">
+                
+                        <X class="w-10 h-10 hover:text-white"/>
+                        <InstagramIcon class="w-10 h-10 hover:text-white"/>
+                        <LinkedinIcon class="w-10 h-10 hover:text-white"/>
+                        <MessageCircle class="w-10 h-10 hover:text-white"/>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
     </div>
-
-    
-
-   
-       
-
 
 </template>
 
@@ -341,33 +380,9 @@ const fecha = ref<DateValue>()
     .fondo {
         min-height: 100vh;
         background-position: center center;
-        background-image: url("../imagenes/Home/fondoo_Mesa de trabajo 1.jpg");
+        background-image: url("../imagenes/Home/fondo3.png");
         background-size: cover;  
         }
-
-    .trabajos-fondo {
-        min-height: 100vh;
-        background-size: cover;
-        background-position: center center;
-        background-image: url("../imagenes/Home/fondoo_Mesa de trabajo 1.jpg");
-        
-    }
-
-    .información-fondo {
-        min-height: 100vh;
-        background-size: auto;
-        background-position: center center;
-        background-image: url("../imagenes/Home/fondo03.jpg");
-        
-    }
-
-    .contacto-fondo {
-        min-height: 100vh;
-        background-size: auto;
-        background-position: center center;
-        background-image: url("../imagenes/Home/fondo04.jpg");
-        
-    }
 
 
     /* móvil */

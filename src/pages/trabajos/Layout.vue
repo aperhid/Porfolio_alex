@@ -1,56 +1,49 @@
 <script setup lang="ts">
 import Button from '@/components/ui/button/Button.vue';
+import { useRouter } from 'vue-router';
 
+const cursorRouter = useRouter();
 
+const irAPaginaTrabajos = () => {
+  cursorRouter.push({ path: '/', hash: '#trabajos' });
+};
 
 </script>
 
 
 
 <template>
-    <div class="grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-screen">
-        <header class="bg-[#ffde00] w-full border border-black">
+    <div class="fondo grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-screen bg-black">
 
-            <div class="flex flex-col md:flex-row items-center justify-between p-3 mx-auto max-w-[1400px] md:px-20">
-
-            <div class="flex gap-6 pt-3">
-             <RouterLink to="/simpsons/gallery" active-class="font-bold">
-                Characters
-            </RouterLink>
-             <RouterLink to="/simpsons/about" active-class="font-bold">
-                About
-            </RouterLink>
-            <Button>
-                <RouterLink to="/simpsons">
-                Exit
-            </RouterLink>
-
-            </Button>    
-            </div>   
-
-            </div>
-
+        <div class="flex flex-col md:flex-row items-center justify-between p-3 mx-auto max-w-[1400px] md:px-20">
             
-           
-            
-        </header>
+        </div>
 
         <main>
             <RouterView />
         </main>
 
-        <footer class="text-center bg-[#ffde00] w-full border border-black py-6">
+        <div class="flex items-center justify-center h-25 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md rounded-t-full">
+            <footer class="">
+            
+                <div class="flex justify-around">
+                    <Button>
+                    <RouterLink to="/">
+                        Exit
+                    </RouterLink>
+                    </Button>
+                    
+                    <Button
+                    @click="irAPaginaTrabajos"
+                    >
+                    <RouterLink to="/">
+                        Exit
+                    </RouterLink>
+                    </Button>  
+                </div>
 
-            <div>
-                <strong>All Rights Reserved</strong> - Oh Lord Matt Groening - 1989-2026
-            </div>
-
-            <small>
-                This app was done by Fernando Cordón
-            </small>
-        
-        </footer>
-	            
+            </footer>            
+        </div>
        
     </div>
 </template>
@@ -58,5 +51,10 @@ import Button from '@/components/ui/button/Button.vue';
 
 
 <style scoped>
+
+.fondo {
+    background-image: url("../imagenes/Home/fondo2.png");
+    background-size: cover;
+}
 
 </style>
