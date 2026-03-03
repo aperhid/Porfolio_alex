@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
 import { ArrowUp } from 'lucide-vue-next'
 
 import {
@@ -37,6 +38,7 @@ import { Calendar } from '@/components/ui/calendar'
 
 import type { DateValue } from 'reka-ui'
 import { ref } from 'vue'
+import { imagenLogo } from '../trabajos/datos'
 
 const scrollToSection = (sectionId: string) => {
     if (sectionId === '#') {
@@ -97,23 +99,32 @@ const fecha = ref<DateValue>()
                     </NavigationMenuList>
                 </NavigationMenu>
 
-                <div class="Portfolio">
-                    <span>
-                        Portfolio
-                    </span>
+                <div class="nombre">
+                    Álex Pérez Hidalgo
                 </div>
         </nav>
 
-        <section class="fondo">
-            <header class="titulo">
-                <div id="titulo-portafolio"> </div>
-                <p>Álex Pérez Hidalgo</p>
-            </header>
+        <section class="fondo_imagen w-screen h-[90vh] lg:min-w-screen lg:min-h-screen">
+           <div 
+            v-for="logotipo in imagenLogo"
+            :key="logotipo.imagen"
+            >
+                <img
+                class="imagenLogo" 
+                :src="`/imagenes/Home/${ logotipo.imagen }`" 
+                alt="logotipo del Porfolio"
+                >
+
+                <h1 class="fecha">
+                    2026
+                </h1>
+
+           </div>
         </section>
        
 
         <section id="trabajos">
-            <div class="fondo flex flex-col gap-8">
+            <div class="bg-black w-screen h-[90vh] lg:min-w-screen lg:min-h-screen flex flex-col gap-8">
                 <div class="texto-trabajos">
                     <h1>
                         Texto
@@ -132,7 +143,7 @@ const fecha = ref<DateValue>()
                                 DISEÑO 3D
                             </h1>
                      
-                                <RouterLink to="/diseño_3d"> 
+                                <RouterLink to="diseño_3d"> 
                                     <ArrowUp class="mt-4 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
                                 </RouterLink>
                         </CardContent>
@@ -177,7 +188,7 @@ const fecha = ref<DateValue>()
         </section>
 
         <section id="información">
-            <div class="fondo">
+            <div class="fondo_imagen2 bg-black w-screen h-[90vh] lg:min-w-screen lg:min-h-screen">
 
                 <div class="card_info">
                     <Card class="w-80 h-150 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
@@ -207,7 +218,7 @@ const fecha = ref<DateValue>()
         </section>
 
         <section id="contacto">
-            <div class="fondo">
+            <div class="bg-[#d8720b]">
 
                 <div>
                     <h2>contáctame</h2>
@@ -325,66 +336,41 @@ const fecha = ref<DateValue>()
             
         </section>
 
-        <footer class="w-full bg-gray-900 text-gray-300 py-12">
-            <div class="flex flex-col md:flex-row md:justify-around gap-8 max-w-3xl mx-auto">
-
-                <div class="space-y-4 text-center md:text-left">
-                    <h3 class="text-xl font-bold text-white">
-                        Información de Contacto
-                    </h3>
-                    
-                    <div class="space-y-2">
-
-                        <p class="flex items-center gap-2 justify-center md:justify-start">
-                            <Phone class="w-5 h-5"/>
-                            +1 (555) 123-4567
-
-                        </p>
-
-                        <p class="flex items-center gap-2 justify-center md:justify-start">
-                            <Mail class="w-5 h-5"/>
-                                batman@wayneenterprises.com
-                        </p>
-
-                        <p class="flex items-center gap-2 justify-center md:justify-start">
-                            <MapPin class="w-5 h-5"/>
-                            Wayne Manor, Gotham City
-                        </p>
-
-                    </div>
-                </div>
-
-                <div class="space-y-4 text-center md:text-left text-gray-400">
-                    <h3 class="text-xl font-bold text-white">
-                        Síguenos
-                    </h3>
-
-                    <div class="flex gap-8 justify-center">
-                
-                        <X class="w-10 h-10 hover:text-white"/>
-                        <InstagramIcon class="w-10 h-10 hover:text-white"/>
-                        <LinkedinIcon class="w-10 h-10 hover:text-white"/>
-                        <MessageCircle class="w-10 h-10 hover:text-white"/>
-
-                    </div>
-                </div>
-            </div>
-        </footer>
-
     </div>
 
 </template>
 
 <style scoped>
 
-    .fondo {
-        min-height: 100vh;
-        background-position: center center;
-        background-image: url("../imagenes/Home/fondo3.png");
-        background-size: cover;  
-        }
+
+.fondo_imagen {
+    background-image: url(../imagenes/Home/fondoPortada.png);
+    background-size: cover;
+}
+
+.fondo_imagen2 {
+    background-image: url(../imagenes/Home/fondoPortada2.png);
+    background-size: cover;
+}
 
 
+.imagenLogo {
+    position: absolute;
+    bottom: 40px; 
+    left: 5%;
+    width: 40vw; 
+    max-width: 600px; 
+    height: auto;
+}
+
+.fecha {
+    color: #d8720b;
+    position: absolute;
+    bottom: 3%; 
+    left: 85%;
+    font-size: 75px;
+    font-weight: bold;
+}
     /* móvil */
     .navegador {
         background-color: blue;
@@ -404,22 +390,22 @@ const fecha = ref<DateValue>()
             height: 60px;
             margin-top: 17px;
             margin-left: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(0.4rem);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(0.3rem);
             border-radius: 2rem 2rem 2rem 2rem;
             opacity: 1;
         }
     }
 
     @media (min-width: 640px) {
-        .Portfolio {
+        .nombre {
             display: flex;
             flex-direction: column;
             justify-content: center;
             margin-right: 50px;
             pointer-events: none;
-            color: white;
+            color: black;
             /* poner fuente */
         }   
     }
@@ -492,6 +478,7 @@ const fecha = ref<DateValue>()
         height: 50rem;
         gap: 2rem;
     }
+
 
   
 </style>

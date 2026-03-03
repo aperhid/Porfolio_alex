@@ -1,12 +1,32 @@
 
+
 <script setup lang="ts">
+
+import { router } from '@/router'
+
+import { trabajoGrafico } from './datos';
+
 
 </script>
 
 <template>
-    <div>
-        <h1>se supone que aqui va el grid de trabajos</h1>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mx-auto">
+        <Card class="cursor-pointer w-[220px] h-[240px] hover:bg-[#ee3133] hover:text-white transition-colors"
+            >
+            <CardContent 
+            class="flex flex-col items-center gap-1 w-full px-0"
+            v-for="proyectoGrafico in trabajoGrafico"
+            :key="proyectoGrafico.id"
+                >
+                    <img class="w-48 h-42 object-cover object-top mt-2 bg-[#ffde00] rounded-t-md border border-black"
+                    :src="`/imagenes/trabajos/3d/${ proyectoGrafico.imagen }`" 
+                    >
+                    <h2 class="font-medium text-lg">{{ proyectoGrafico.titulo }}</h2>
+            </CardContent>
+        </Card>
+
     </div>
+
     <div>
          <Button class="bg-[#ee3133] hover:bg-[#ffde00] focus:bg-[#ffde00]">
                 <RouterLink to="/trabajos_detalles">

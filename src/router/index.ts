@@ -11,7 +11,8 @@ import Ilustracion from "@/pages/trabajos/ilustracion.vue";
 
 import Layout from "@/pages/trabajos//Layout.vue";
 
-import Detalles from "@/pages/trabajos/Detalles.vue";
+import Detalles from "@/pages/trabajos/detalles/Detalles.vue";
+import LayoutDetalle from "@/pages/trabajos/detalles/LayoutDetalle.vue";
 
 
 
@@ -38,10 +39,17 @@ export const router = createRouter({
               component: Diseño_3d
             },
             {
-              path: '/trabajos_detalles',
+              path: '',
+              component: LayoutDetalle,
+              children: [
+                {
+              path: 'trabajos_detalles',
               name: 'trabajos_detalles',
               component: Detalles
              }
+              ]
+            }
+            
           ]   
         }
       ]
