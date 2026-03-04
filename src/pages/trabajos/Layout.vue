@@ -14,7 +14,7 @@ const irAPaginaTrabajos = () => {
 
 
 <template>
-    <div class="fondo grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-screen bg-black">
+    <div class="fondo grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-screen">
         <div />
         <main>
             <RouterView />
@@ -52,7 +52,7 @@ const irAPaginaTrabajos = () => {
 <style scoped>
 
 .fondo {
-    background-image: url("../imagenes/Home/fondo2.png");
+    background-image: url("../imagenes/trabajos/fondo2.png");
     background-size: cover;
 }
 

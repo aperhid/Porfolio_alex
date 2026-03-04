@@ -119,7 +119,7 @@ const fecha = ref<DateValue>()
        
 
         <section id="trabajos">
-            <div class="bg-black w-screen h-[90vh] lg:min-w-screen lg:min-h-screen flex  justify-center">
+            <div class="bg-black w-screen h-[90vh] lg:min-w-screen lg:min-h-screen flex justify-center">
                 <div class="titulo_trabajos">
                     <h1>
                         Proyectos
