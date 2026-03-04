@@ -124,54 +124,51 @@ const fecha = ref<DateValue>()
        
 
         <section id="trabajos">
-            <div class="bg-black w-screen h-[90vh] lg:min-w-screen lg:min-h-screen flex flex-col gap-8">
-                <div class="texto-trabajos">
+            <div class="bg-black w-screen h-[90vh] lg:min-w-screen lg:min-h-screen flex  justify-center">
+                <div class="titulo_trabajos">
                     <h1>
-                        Texto
-                    </h1>
-                    <p>
-                        Click on the quote of your favourite character
-                    </p>   
+                        Proyectos
+                    </h1>  
                 </div>
 
                 <div class="card">
-                    <Card class="w-60 h-80 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md hover:scale-105 transition-transform">
+                    <Card class="w-80 h-110 border border-[rgba(255,255,255,0.4)] bg-gradient-to-br from-[#d8720b]/40 via-black/20 to-[#d8720b]/40 backdrop-blur-sm hover:scale-105 transition-transform">
                         <CardContent class="flex flex-col items-center">
-                            <img class="w-48 h-42 object-cover object-top mt-2 rounded-md"
+                            <img class="w-70 h-60 object-cover object-top mt-2 rounded-md"
                             src="../imagenes/Home/homer-s.png" alt="">
-                            <h1 class="mt-4 font-medium text-lg pointer-events-none text-white">
+                            <h1 class="mt-9 font-medium text-2xl pointer-events-none text-white">
                                 DISEÑO 3D
                             </h1>
                      
                                 <RouterLink to="diseño_3d"> 
-                                    <ArrowUp class="mt-4 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
+                                    <ArrowUp class="mt-7 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
                                 </RouterLink>
                         </CardContent>
                     </Card> 
-                    <Card class="w-60 h-80 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md hover:scale-105 transition-transform">
+                    <Card class="w-80 h-110 border border-[rgba(255,255,255,0.4)] bg-gradient-to-br from-[#d8720b]/40 via-black/20 to-[#d8720b]/40 backdrop-blur-sm hover:scale-105 transition-transform">
                         <CardContent class="flex flex-col items-center">
-                            <img class="w-48 h-42 object-cover object-top mt-2 rounded-md"
+                            <img class="w-70 h-60 object-cover object-top mt-2 rounded-md"
                             src="../imagenes/Home/homer-s.png" alt="">
-                            <h1 class="mt-4 font-medium text-lg pointer-events-none text-white">
+                            <h1 class="mt-9 font-medium text-2xl pointer-events-none text-white">
                                 DISEÑO GRÁFICO
                             </h1>
                      
                                 <RouterLink to="/diseño_gráfico"> 
-                                    <ArrowUp class="mt-4 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
+                                    <ArrowUp class="mt-7 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
                                 </RouterLink>
                         </CardContent>
                     </Card>  
 
-                      <Card class="w-60 h-80 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md hover:scale-105 transition-transform">
+                      <Card class="w-80 h-110 border border-[rgba(255,255,255,0.4)] bg-gradient-to-br from-[#d8720b]/40 via-black/20 to-[#d8720b]/40 backdrop-blur-sm hover:scale-105 transition-transform">
                         <CardContent class="flex flex-col items-center">
-                            <img class="w-48 h-42 object-cover object-top mt-2 rounded-md"
+                            <img class="w-70 h-60 object-cover object-top mt-2 rounded-md"
                             src="../imagenes/Home/homer-s.png" alt="">
-                            <h1 class="mt-4 font-medium text-lg pointer-events-none text-white">
+                            <h1 class="mt-9 font-medium text-2xl pointer-events-none text-white">
                                 ILUSTRACIÓN
                             </h1>
 
                                 <RouterLink to="/ilustración"> 
-                                    <ArrowUp class="mt-4 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
+                                    <ArrowUp class="mt-7 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
                                 </RouterLink>
                         </CardContent>
                     </Card>  
@@ -188,9 +185,12 @@ const fecha = ref<DateValue>()
         </section>
 
         <section id="información">
-            <div class="fondo_imagen2 bg-black w-screen h-[90vh] lg:min-w-screen lg:min-h-screen">
+            <div class="fondo_imagen2 bg-black w-screen h-screen lg:min-w-screen lg:min-h-screen">
 
-                <div class="card_info">
+                <div class="flex flex-row justify-center items-center gap-6 h-[107vh] mr-20">
+                    <div class="titulo_info">
+                        Sobre mí
+                    </div>
                     <Card class="w-80 h-150 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                         <CardContent>
                             <h1>dibujo o foto mía</h1>      
@@ -218,85 +218,55 @@ const fecha = ref<DateValue>()
         </section>
 
         <section id="contacto">
-            <div class="bg-[#d8720b]">
+            <div class="fondo_imagen w-screen">
+                
+                    <h1 class="absolute text-7xl font-bold text-white mt-50 ml-10 pointer-events-none">
+                        ¿Te interesa...? <br> 
+                        ¡Contáctame!
+                    </h1>
 
-                <div>
-                    <h2>contáctame</h2>
-                </div>
-
-                <div class="card_contacto h-80">
-                    <Card class="border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                <div class="card_contacto">
+                    <Card class="border-4 border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                         <CardContent>
-                            <div class="w-full">
-                                <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.362756509978!2d-0.3466072242107245!3d39.48372267160471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60488259073375%3A0xfb410ba707ca33c9!2sUPV%20-%20Facultad%20de%20Bellas%20Artes%20BBAA!5e0!3m2!1ses!2ses!4v1771162810587!5m2!1ses!2ses" 
-                                    width="600" 
-                                    height="450" 
-                                    class="w-full h-full rounded-lg"
-                                    allowfullscreen
-                                    loading="lazy" 
-                                    referrerpolicy="no-referrer-when-downgrade"
-                                ></iframe>
+                            <div class="w-full aspect-square">
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24651.751686028074!2d-0.4990223256836036!3d39.43613130000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6051cf930b3ef3%3A0xa415f9d06eb6b1d4!2sTorrent!5e0!3m2!1ses!2ses!4v1772584451847!5m2!1ses!2ses" 
+                              class="h-full w-full"                              
+                               allowfullscreen 
+                               loading="lazy" 
+                               referrerpolicy="no-referrer-when-downgrade"
+                               ></iframe>
                             </div>     
                         </CardContent>
                     </Card>
 
-            
                     <div>
-                        <Card class="border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                        <Card class="border-4 border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                             <CardContent>
                                <div>
                                     <form>
-                                        <div class="space-y-2">
+                                        <div class="space-y-2 mb-4 text-white">
 
-                                            <Label for="nombre">Nombre</Label>
+                                            <Label for="nombre" >Nombre</Label>
                                             <Input id="nombre" required />
 
                                         </div>
                                                 
-                                        <div class="space-y-2">
+                                        <div class="space-y-2 mb-4 text-white">
                                                 
                                             <Label for="apellido">Apellidos</Label>
                                             <Input id="apellido" required />
 
                                         </div>
 
-                                        <div class="space-y-2">
-
-                                            <Select required >
-                                                <SelectTrigger class="border-gray-200 bg-white text-gray-900">
-                                                    <SelectValue placeholder="Selecciona una misión"/>
-                                                </SelectTrigger>
-
-                                                <SelectContent class="bg-white">
-                                                    <SelectItem value="rescatare">
-                                                        Rescate de rehenes
-                                                    </SelectItem>
-                                                    <SelectItem value="investigare">
-                                                        Investigación criminal
-                                                    </SelectItem>
-                                                    <SelectItem value="persequi">
-                                                        Persecución de villanos
-                                                    </SelectItem>
-                                                    <SelectItem value="defendere">
-                                                        Defensa de Gotham
-                                                    </SelectItem>
-                                                </SelectContent>
-                                            </Select>
-
-                                        </div>
-
-                                        <div class="space-y-2">
-
-                                            <label>Fecha de la misión</label>
+                                        <div class="space-y-3 pg-3 ml-2">
                                                 <Popover required>
-                                                    <PopoverTrigger asChild class="flex"> 
-                                                        <Button variant="outline"> 
+                                                    <PopoverTrigger asChild> 
+                                                        <Button class="border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md"> 
                                                             <span v-if="fecha">
                                                                 {{ fecha.day }}/{{ fecha.month }}/{{ fecha.year }}
                                                             </span>
                                                             <span v-else>
-                                                                Selecciona una fecha.
+                                                                Seleccione una fecha.
                                                             </span>
                                                         </Button>
                                                     </PopoverTrigger>
@@ -308,7 +278,7 @@ const fecha = ref<DateValue>()
 
                                         <Button
                                             type="submit"
-                                            class="w-full bg-[rgb(106,90,205)] hover:bg-[rgb(88,75,171)] text-white text-md mt-4">
+                                            class="w-full bg-[#d8720b] text-black hover:text-[#d8720b] scale-95 text-md mt-4 cursor-pointer py-3 rounded-full font-semibold transition-all">
                                                 Enviar solicitud
                                         </Button>
 
@@ -317,8 +287,8 @@ const fecha = ref<DateValue>()
                             </CardContent>
                         </Card>
 
-                        <div class="mt-5">
-                            <Card class="h-10 rounded-b-full border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                        <div class="mt-6 text-center">
+                            <Card class="h-10 rounded-b-full border-4 border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                                 <CardContent>
                                     <h2>redes</h2>
                                 </CardContent>
@@ -327,9 +297,6 @@ const fecha = ref<DateValue>()
 
                        
                     </div>
-
-                    
-                    
                 </div>
 
             </div>
@@ -370,12 +337,12 @@ const fecha = ref<DateValue>()
     left: 85%;
     font-size: 75px;
     font-weight: bold;
+    pointer-events: none;
 }
     /* móvil */
     .navegador {
         background-color: blue;
         opacity: 0.7;
-        box-shadow: rgba(0, 0, 0, 0.7);
         position: fixed;
         top: 0;
         width: 11rem;
@@ -387,7 +354,7 @@ const fecha = ref<DateValue>()
     @media (min-width: 640px) {
         .navegador {
             width: calc(100% - 40px);
-            height: 60px;
+            height: 50px;
             margin-top: 17px;
             margin-left: 16px;
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -405,70 +372,36 @@ const fecha = ref<DateValue>()
             justify-content: center;
             margin-right: 50px;
             pointer-events: none;
-            color: black;
-            /* poner fuente */
-        }   
-    }
-
-    /* tocar */
-    .titulo > h1 { 
-        position: absolute;
-        top: 40%;
-        width: 100%;
-        text-align: center;
-        font-size: 3rem; 
-        color: black;
-        pointer-events:none; 
-    }
-
-    /* tocar */
-    .titulo > p {
-        position: absolute;
-        top: 60%;
-        width: 100%;
-        text-align: center;
-        font-size: 1.5rem; 
-        color: black;
-        pointer-events:none; 
-    }
-/* tocar */
-    @media (min-width: 768px) {
-        .titulo > h1 { 
-            position: absolute;
-            top: 40%;
-            width: 100%;
-            text-align: center;
-            font-size: 5rem; 
-            color: black;
-            pointer-events:none; 
-        }   
-
-        .titulo > p {
-            position: absolute;
-            top: 60%;
-            width: 100%;
-            text-align: center;
-            font-size: 2rem; 
             color: white;
-            pointer-events:none; 
-        }
+            
+        }   
+    }
 
-    }  
+    .titulo_trabajos {
+        font-size: 10rem;
+        font-weight: 500;
+        color: white;
+        margin-top: 28rem;
+        
+    }
+
+    .titulo_info {
+        font-size: 8rem;
+        font-weight: 500;
+        color: white;
+        writing-mode:vertical-lr;
+        transform: rotate(180deg);
+        margin-top: 5.5rem;
+        pointer-events: none;
+    }
    
     .card {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40rem;
-        gap: 10rem;
-    }
-
-    .card_info {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50rem;
-        gap: 2rem;
+        height: 43rem;
+        gap: 5rem;
+        position: absolute;
     }
 
     .card_contacto {
@@ -477,6 +410,7 @@ const fecha = ref<DateValue>()
         align-items: center;
         height: 50rem;
         gap: 2rem;
+        width: 125rem;
     }
 
 
