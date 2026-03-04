@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 
-import { ArrowUp } from 'lucide-vue-next'
+import { ArrowUp, Instagram, Mail, MessageCircle } from 'lucide-vue-next'
+
+import { Separator } from '@/components/ui/separator'
 
 import {
   Card,
@@ -14,14 +16,6 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
-
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
 
 import {
   Popover,
@@ -39,6 +33,7 @@ import { Calendar } from '@/components/ui/calendar'
 import type { DateValue } from 'reka-ui'
 import { ref } from 'vue'
 import { imagenLogo } from '../trabajos/datos'
+
 
 const scrollToSection = (sectionId: string) => {
     if (sectionId === '#') {
@@ -226,7 +221,7 @@ const fecha = ref<DateValue>()
                     </h1>
 
                 <div class="card_contacto">
-                    <Card class="border-4 border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                    <Card class="border-3 border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                         <CardContent>
                             <div class="w-full aspect-square">
                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24651.751686028074!2d-0.4990223256836036!3d39.43613130000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6051cf930b3ef3%3A0xa415f9d06eb6b1d4!2sTorrent!5e0!3m2!1ses!2ses!4v1772584451847!5m2!1ses!2ses" 
@@ -240,28 +235,28 @@ const fecha = ref<DateValue>()
                     </Card>
 
                     <div>
-                        <Card class="border-4 border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                        <Card class="border-3 border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                             <CardContent>
                                <div>
                                     <form>
                                         <div class="space-y-2 mb-4 text-white">
 
-                                            <Label for="nombre" >Nombre</Label>
+                                            <Label for="nombre" class="font-light" >Nombre</Label>
                                             <Input id="nombre" required />
 
                                         </div>
                                                 
                                         <div class="space-y-2 mb-4 text-white">
                                                 
-                                            <Label for="apellido">Apellidos</Label>
+                                            <Label for="apellido" class="font-light">Apellidos</Label>
                                             <Input id="apellido" required />
 
                                         </div>
 
-                                        <div class="space-y-3 pg-3 ml-2">
+                                        <div class="space-y-2">
                                                 <Popover required>
                                                     <PopoverTrigger asChild> 
-                                                        <Button class="border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md"> 
+                                                        <Button class="w-full border border-[rgba(255,255,255,0.4)] bg-transparent hover:bg-[rgba(255,255,255,0.3)] cursor-pointer backdrop-blur-md"> 
                                                             <span v-if="fecha">
                                                                 {{ fecha.day }}/{{ fecha.month }}/{{ fecha.year }}
                                                             </span>
@@ -287,15 +282,31 @@ const fecha = ref<DateValue>()
                             </CardContent>
                         </Card>
 
-                        <div class="mt-6 text-center">
-                            <Card class="h-10 rounded-b-full border-4 border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
-                                <CardContent>
-                                    <h2>redes</h2>
+                        <div class="mt-4 flex justify-center">
+                            <Card class="h-10 px-9 rounded-b-full border-3 border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                                <CardContent class="flex items-center justify-center gap-6 h-full p-0">
+      
+                                    <a href="https://www.instagram.com/alezzz_____" target="_blank" rel="noopener noreferrer">
+                                     <Instagram class="w-7 h-7 text-white/80 hover:text-[#d8720b] cursor-pointer transition-colors" />    
+                                    </a>
+                                   
+                                    <div class="h-6 w-px bg-white/40"></div>
+      
+                                    <a href="mailto:alexph1912@gmail.com">
+                                     <Mail class="w-7 h-7 text-white/80 hover:text-[#d8720b] cursor-pointer transition-colors" />   
+                                    </a>
+                                    
+      
+                                    <div class="h-6 w-px bg-white/40"></div>
+      
+                                    <a href="https://wa.me/652154592" target="_blank" rel="noopener noreferrer">
+                                     <MessageCircle class="w-7 h-7 text-white/80 hover:text-[#d8720b] cursor-pointer transition-colors" />   
+                                    </a>
+                                    
                                 </CardContent>
                             </Card>     
                         </div>
 
-                       
                     </div>
                 </div>
 
