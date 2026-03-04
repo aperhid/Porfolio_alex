@@ -31,9 +31,10 @@ const irALaPagina = (pagina: number) => {
 
 <template>
     
-  <div class="flex flex-col items-center justify-center gap-8 max-w-350 my-3 mx-auto">
-    <div class="text-center">
-        <h1 class="font-bold text-2xl text-white pointer-events-none">¡Haz click en una tarjeta para ver los detalles!</h1>
+  <div class="flex flex-col items-center justify-center max-w-350 my-3 mx-auto">
+    <div class="text-center mt-8">
+        <h1 class="font-bold text-7xl text-white pointer-events-none">Diseño 3d</h1>
+        <h2 class="font-bold text-2xl text-white pointer-events-none mt-5">¡Haz click en una tarjeta para ver los detalles!</h2>
     </div>
 
     <div class="flex items-center">
@@ -44,7 +45,7 @@ const irALaPagina = (pagina: number) => {
             :disabled="paginaActual === 1" 
             :class="['relative mr-20 mt-20 flex items-center justify-center rounded-full backdrop-blur-md transition-all', 
                 paginaActual === 1
-                    ? 'text-black cursor-not-allowed'
+                    ? 'opacity-0'
                     : 'text-white hover:scale-110 hover:text-[#d8720b] cursor-pointer'
             ]">
                 <CircleChevronLeft class="w-13 h-13"/>
@@ -53,7 +54,7 @@ const irALaPagina = (pagina: number) => {
 
         <div class="grid grid-cols-2 gap-20 mx-auto">
             <Card 
-            class="mt-20 cursor-pointer w-70 h-90 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-sm hover:scale-105 transition-all hover:shadow-[0_0_20px_#d8720b]"
+            class="mt-15 cursor-pointer w-70 h-90 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-sm hover:scale-105 transition-all hover:shadow-[0_0_20px_#d8720b]"
             v-for="proyecto3d in lista3d"
             >
                 <CardContent class="flex flex-col items-center gap-3 w-full">
@@ -74,7 +75,7 @@ const irALaPagina = (pagina: number) => {
             :disabled="paginaActual === totalPaginas"  
             :class="['relative ml-20 mt-20 flex items-center justify-center rounded-full backdrop-blur-md transition-all',
                 paginaActual === totalPaginas
-                    ? 'text-black cursor-not-allowed'
+                    ? 'opacity-0'
                     : 'text-white hover:scale-110 hover:text-[#d8720b] cursor-pointer'
             ]">
                 <CircleChevronRight class="w-13 h-13"/>
