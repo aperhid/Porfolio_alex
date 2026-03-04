@@ -4,6 +4,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 
 import { Trabajo3d, type proyecto3d } from './datos';
+
 import { ref } from 'vue';
 
 const lista3d = ref<proyecto3d[]>(Trabajo3d.slice(0, 2) )

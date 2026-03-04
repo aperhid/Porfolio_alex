@@ -66,7 +66,31 @@ export const Trabajo3d: proyecto3d[] = [
 export const trabajoGrafico: proyectoGrafico[] = [
     {
         id: 0,
-        titulo: 'Abe Simpson',
+        titulo: '...',
+        imagen:'homer-s.png',
+       
+    },
+    {
+        id: 1,
+        titulo: 'Cartel teatral',
+        imagen:'homer-s.png',
+       
+    },
+    {
+        id: 2,
+        titulo: 'Revista editorial',
+        imagen:'homer-s.png',
+       
+    },
+    {
+        id: 3,
+        titulo: '...',
+        imagen:'homer-s.png',
+       
+    },
+    {
+        id: 4,
+        titulo: '...',
         imagen:'homer-s.png',
        
     },
@@ -80,7 +104,25 @@ export const trabajoGrafico: proyectoGrafico[] = [
 export const trabajoIlustracion: proyectoIlustracion[] = [
     {
         id: 0,
-        titulo: 'homer',
+        titulo: 'ilustracion libro',
+        imagen:'homer-s.png',
+       
+    },
+    {
+        id: 1,
+        titulo: 'ilustracion conceptual',
+        imagen:'homer-s.png',
+       
+    },
+    {
+        id: 2,
+        titulo: 'comic',
+        imagen:'homer-s.png',
+       
+    },
+    {
+        id: 3,
+        titulo: 'gojo',
         imagen:'homer-s.png',
        
     },
