@@ -168,15 +168,9 @@ const fecha = ref<DateValue>()
                         </CardContent>
                     </Card>  
 
-
                 </div>
-                   
-                 
-
+                  
             </div>
-
-                
-            
         </section>
 
         <section id="información">
@@ -199,7 +193,7 @@ const fecha = ref<DateValue>()
                             </CardContent>
                         </Card>
 
-                        <Card class="w-150 h-70 border  border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                        <Card class="w-150 h-70 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                             <CardContent>
                                 <h1>skills</h1>      
                             </CardContent>
@@ -261,7 +255,7 @@ const fecha = ref<DateValue>()
                                                                 {{ fecha.day }}/{{ fecha.month }}/{{ fecha.year }}
                                                             </span>
                                                             <span v-else>
-                                                                Seleccione una fecha.
+                                                                Selecciona una fecha.
                                                             </span>
                                                         </Button>
                                                     </PopoverTrigger>

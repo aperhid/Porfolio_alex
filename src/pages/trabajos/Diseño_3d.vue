@@ -1,38 +1,41 @@
 
 <script setup lang="ts">
 
-import { router } from '@/router'
+import { Card, CardContent } from '@/components/ui/card';
 
-import { trabajo3d } from './datos';
+import { Trabajo3d, type proyecto3d } from './datos';
+import { ref } from 'vue';
 
+const lista3d = ref<proyecto3d[]>(Trabajo3d.slice(0, 2) )
 
 </script>
 
 <template>
-    <div class="grid grid-row-2 md:grid-cols-3 gap-8 mx-auto">
-        <Card class="cursor-pointer w-[220px] h-[240px] hover:bg-[#ee3133] hover:text-white transition-colors"
-            >
-            <CardContent 
-            class="flex flex-col items-center gap-1 w-full px-0"
-            v-for="proyecto3d in trabajo3d"
-            :key="proyecto3d.id"
+  <div class="flex flex-col items-center justify-center gap-8 max-w-350 my-8 mx-auto">
+    <div class="text-center">
+        <h1 class="font-bold text-2xl text-white mb-5">¡Haz click en una tarjeta para ver los detalles!</h1>
+    </div>
+
+    <div class="grid grid-cols-2 gap-10 mx-auto">
+        <Card 
+        class="cursor-pointer w-60 h-65 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.2)] backdrop-blur-sm hover:scale-105 transition-all hover:shadow-[0_0_20px_#d8720b]"
+        v-for="proyecto3d in lista3d"
+        >
+            <CardContent class="flex flex-col items-center gap-3 w-full">
+                <img 
+                :src="`/imagenes/Home/trabajos/3d/${ proyecto3d.imagen }`" 
+                alt=""
+                class="w-50 h-45 rounded-lg"
                 >
-                    <img class="w-48 h-42 object-cover object-top mt-2 bg-[#ffde00] rounded-t-md border border-black"
-                    :src="`/imagenes/trabajos/3d/${ proyecto3d.imagen }`" 
-                    >
-                    <h2 class="font-medium text-lg">{{ proyecto3d.titulo }}</h2>
+                <h2 class="font-medium text-lg"> {{ proyecto3d.titulo }} </h2>
+                
             </CardContent>
-        </Card>
-
+        </Card>   
     </div>
+    
+  </div>
 
-    <div>
-         <Button class="bg-[#ee3133] hover:bg-[#ffde00] focus:bg-[#ffde00]">
-                <RouterLink to="trabajos_detalles">
-                Exit
-            </RouterLink>
-        </Button>
-    </div>
+
 </template>
 
 

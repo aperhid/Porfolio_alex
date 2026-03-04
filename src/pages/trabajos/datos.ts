@@ -30,7 +30,7 @@ export interface proyectoIlustracion {
 
 
 
-export const trabajo3d: proyecto3d[] = [
+export const Trabajo3d: proyecto3d[] = [
     {
         id: 0,
         titulo: 'MOOD',
@@ -44,8 +44,14 @@ export const trabajo3d: proyecto3d[] = [
        
     },
     {
-        id: 0,
+        id: 2,
         titulo: '36 days of type',
+        imagen:'homer-s.png',
+       
+    },
+    {
+        id: 3,
+        titulo: 'Figura decorativa',
         imagen:'homer-s.png',
        
     },
