@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 
-import { ArrowUp, Instagram, Mail, MessageCircle } from 'lucide-vue-next'
+import { ArrowUp, Award, GraduationCap, Instagram, Mail, MessageCircle } from 'lucide-vue-next'
 
 import { Separator } from '@/components/ui/separator'
 
@@ -35,6 +35,7 @@ import { ref } from 'vue'
 import { imagenLogo } from '../trabajos/datos'
 
 
+
 const scrollToSection = (sectionId: string) => {
     if (sectionId === '#') {
     window.scrollTo({top: 0, behavior:'smooth'})
@@ -52,7 +53,7 @@ const fecha = ref<DateValue>()
 
 <template>
 
-    <div>
+    <div class="overflow-x-hidden">
 
         <nav class="navegador flex flex-col sm:flex-row justify-between">
 
@@ -99,7 +100,7 @@ const fecha = ref<DateValue>()
                 </div>
         </nav>
 
-        <section class="fondo_imagen w-screen h-[90vh] lg:min-w-screen lg:min-h-screen">
+        <section class="fondo_imagen w-full h-[90vh] lg:min-w-screen lg:min-h-screen">
            <div 
             v-for="logotipo in imagenLogo"
             :key="logotipo.imagen"
@@ -119,7 +120,7 @@ const fecha = ref<DateValue>()
        
 
         <section id="trabajos">
-            <div class="bg-black w-screen h-[90vh] lg:min-w-screen lg:min-h-screen flex justify-center">
+            <div class="bg-black w-full h-[90vh] lg:min-w-screen lg:min-h-screen flex justify-center">
                 <div class="titulo_trabajos">
                     <h1>
                         Proyectos
@@ -174,26 +175,94 @@ const fecha = ref<DateValue>()
         </section>
 
         <section id="información">
-            <div class="fondo_imagen2 bg-black w-screen h-screen lg:min-w-screen lg:min-h-screen">
+            <div class="fondo_imagen2 w-full min-h-screen">
 
-                <div class="flex flex-row justify-center items-center gap-6 h-[107vh] mr-20">
+                <div class="flex flex-row justify-center items-center gap-6 h-[110vh] mr-20">
                     <div class="titulo_info">
                         Sobre mí
                     </div>
-                    <Card class="w-80 h-150 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                    <Card class="w-80 h-150 rounded-r-none border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                         <CardContent>
-                            <h1>dibujo o foto mía</h1>      
+                            <img
+                            class="w-75 h-137"
+                            src="../imagenes/Home/homer-s.png" 
+                            alt=""
+                            >     
                         </CardContent>
                     </Card>
                     
                     <div class="flex flex-col gap-5">
-                        <Card class="w-150 h-75 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
-                            <CardContent>
-                                <h1>estudios</h1>      
+                        <Card class="w-150 h-75 rounded-b-none rounded-l-none rounded-tr-3xl border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                            <CardContent >
+                                <div class="flex flex-col gap-3">
+                                    <p class="text-white">¡Hola! Soy Álex, estudiante de diseño y un apasionado de todas las ramas artísticas. En cada proyecto, ofrezco un matiz... </p>
+                                    <Separator />
+
+                                    <div class="flex justify-between py-2">
+                                        <div class="flex items-center gap-5 group cursor-default">
+                                            <span class="text-white font-medium">Español</span>
+                                            <span
+                                            class="text-[#d8720b] font-medium opacity-0 group-hover:opacity-100 transition-opacity"
+                                            >
+                                            nativo
+                                            </span>
+                                        </div>
+
+                                    
+                                        <div class="flex items-center gap-5 group cursor-default">
+                                            <span class="text-white font-medium">Valenciano</span>
+                                            <span
+                                            class="text-[#d8720b] font-medium opacity-0 group-hover:opacity-100 transition-opacity"
+                                            >
+                                            C1
+                                            </span>
+                                        </div>
+
+                                        
+                                        <div class="flex items-center gap-5 group cursor-default">
+                                            <span class="text-white font-medium">Inglés</span>
+                                            <span
+                                            class="text-[#d8720b] font-medium opacity-0 group-hover:opacity-100 transition-opacity"
+                                            >
+                                            B1
+                                            </span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <Separator />
+
+                                    <div class="flex flex-col text-white gap-2">
+                                        <h2 class="font-medium">
+                                            2024 - actualidad
+                                        </h2>
+
+                                        <div class="flex gap-2">
+                                            <GraduationCap class="text-[#d8720b]"/>
+                                            <a href="https://www.upv.es/titulaciones/GDTC/indexc.html" target="_blank" rel="noopener noreferrer" class="hover:text-[#d8720b]"> Diseño y Tecnologias Creativas - UPV</a>    
+                                        </div>
+                                    </div>
+
+                                    <Separator />
+
+                                    <div class="flex justify-around items-center">
+                                        <div class="flex">
+                                            <Award />
+                                            <p>fmdkf</p>
+                                        </div>
+
+                                        <div class="flex">
+                                            <Award />
+                                            <p>fmdkf</p>
+                                        </div> 
+                                    </div>
+                                    
+
+                                </div>
                             </CardContent>
                         </Card>
 
-                        <Card class="w-150 h-70 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                        <Card class="w-150 h-70 rounded-t-none rounded-l-none rounded-br-3xl border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                             <CardContent>
                                 <h1>skills</h1>      
                             </CardContent>
@@ -207,7 +276,7 @@ const fecha = ref<DateValue>()
         </section>
 
         <section id="contacto">
-            <div class="fondo_imagen w-screen">
+            <div class="fondo_imagen w-full">
                 
                     <h1 class="absolute text-7xl font-bold text-white mt-50 ml-10 pointer-events-none">
                         ¿Te interesa...? <br> 
@@ -298,18 +367,23 @@ const fecha = ref<DateValue>()
                                     </a>
                                     
                                 </CardContent>
-                            </Card>     
+                            </Card>
+                                 
                         </div>
-
-                    </div>
+                        
+                </div>
+                    
                 </div>
 
+                <div class="w-full flex justify-end items-end ">
+                    <h2 class="text-7xl font-bold text-[#d8720b] mr-10 mb-10">
+                        ¡Gracias!
+                    </h2>
+                </div>
             </div>
-            
         </section>
 
     </div>
-
 </template>
 
 <style scoped>
