@@ -34,7 +34,14 @@ import type { DateValue } from 'reka-ui'
 import { ref } from 'vue'
 import { imagenLogo } from '../trabajos/datos'
 
+import { ProgramasInfo, type programasInfo } from './programasInfo'
 
+
+
+
+const imagenInformacion = ref<string>('homer-s.png')
+
+const listaProgramas = ref<programasInfo[]>( ProgramasInfo )
 
 const scrollToSection = (sectionId: string) => {
     if (sectionId === '#') {
@@ -183,11 +190,13 @@ const fecha = ref<DateValue>()
                     </div>
                     <Card class="w-80 h-150 rounded-r-none border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                         <CardContent>
-                            <img
-                            class="w-75 h-137"
-                            src="../imagenes/Home/homer-s.png" 
-                            alt=""
-                            >     
+                             <img 
+                                class="object-contain h-137 w-75" 
+                                :src="`/imagenes/${ imagenInformacion }`" 
+                                alt=""
+                                @mouseenter="imagenInformacion='foto.jpg'"
+                                @mouseleave="imagenInformacion='homer-s.png'"
+                                >
                         </CardContent>
                     </Card>
                     
@@ -195,7 +204,7 @@ const fecha = ref<DateValue>()
                         <Card class="w-150 h-75 rounded-b-none rounded-l-none rounded-tr-3xl border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                             <CardContent >
                                 <div class="flex flex-col gap-3">
-                                    <p class="text-white">¡Hola! Soy Álex, estudiante de diseño y un apasionado de todas las ramas artísticas. En cada proyecto, ofrezco un matiz... </p>
+                                    <p class="text-white pointer-events-none">¡Hola! Soy Álex, estudiante de diseño y un apasionado de todas las ramas artísticas. En cada proyecto, ofrezco un matiz... </p>
                                     <Separator />
 
                                     <div class="flex justify-between py-2">
@@ -204,7 +213,7 @@ const fecha = ref<DateValue>()
                                             <span
                                             class="text-[#d8720b] font-medium opacity-0 group-hover:opacity-100 transition-opacity"
                                             >
-                                            nativo
+                                            Nativo
                                             </span>
                                         </div>
 
@@ -232,28 +241,36 @@ const fecha = ref<DateValue>()
                                     
                                     <Separator />
 
-                                    <div class="flex flex-col text-white gap-2">
-                                        <h2 class="font-medium">
-                                            2024 - actualidad
-                                        </h2>
+                                    <div class="flex flex-col py-2">
+                                        <div class="flex justify-between">
+                                         <div class="flex text-white gap-2">
+                                            <GraduationCap class="text-[#d8720b] w-7 h-7"/>
+                                            <a href="https://portal.edu.gva.es/iestirantloblanc/es/inici-es/" target="_blank" rel="noopener noreferrer" class="hover:text-[#d8720b]"> 
+                                                Bachillerato de Artes plásticas y Diseño
+                                            </a>    
+                                        </div>   
 
-                                        <div class="flex gap-2">
-                                            <GraduationCap class="text-[#d8720b]"/>
-                                            <a href="https://www.upv.es/titulaciones/GDTC/indexc.html" target="_blank" rel="noopener noreferrer" class="hover:text-[#d8720b]"> Diseño y Tecnologias Creativas - UPV</a>    
+                                         <div class="flex text-white gap-2">
+                                            <GraduationCap class="text-[#d8720b] w-7 h-7"/>
+                                            <a href="https://www.upv.es/titulaciones/GDTC/indexc.html" target="_blank" rel="noopener noreferrer" class="hover:text-[#d8720b]"> 
+                                                Diseño y Tecnologias Creativas UPV <br>
+                                            </a>    
                                         </div>
+                                        </div>
+                                        
                                     </div>
 
                                     <Separator />
 
-                                    <div class="flex justify-around items-center">
-                                        <div class="flex">
-                                            <Award />
-                                            <p>fmdkf</p>
+                                    <div class="flex justify-between items-center pointer-events-none mt-1 text-white">
+                                        <div class="flex gap-2">
+                                            <Award class="text-[#d8720b] w-7 h-7"/>
+                                            <p>Matrícula de honor en Bachillerato</p>
                                         </div>
 
-                                        <div class="flex">
-                                            <Award />
-                                            <p>fmdkf</p>
+                                        <div class="flex gap-2">
+                                            <Award class="text-[#d8720b] w-7 h-7"/>
+                                            <p>Mención honorífica EVAU</p>
                                         </div> 
                                     </div>
                                     
@@ -264,7 +281,22 @@ const fecha = ref<DateValue>()
 
                         <Card class="w-150 h-70 rounded-t-none rounded-l-none rounded-br-3xl border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                             <CardContent>
-                                <h1>skills</h1>      
+                                <div class="grid grid-cols-3 gap-6 py-2 place-items-center">
+                                        <div 
+                                        class="flex items-center gap-5 group cursor-default"
+                                        v-for="programas in listaProgramas"
+                                        >
+                                            <img class="w-15 h-15 hover:scale-105 rounded-2xl hover:shadow-[0_0_20px_white]"
+                                            :src="`/imagenes/informacion/${ programas.imagen }`" 
+                                            :alt="`${ programas.titulo }`"
+                                            >
+                                            <span
+                                            class="text-white font-medium opacity-0 group-hover:opacity-100 transition-all"
+                                            >
+                                            {{ programas.nivel }}
+                                            </span>
+                                        </div>
+                                    </div>  
                             </CardContent>
                         </Card>
                     </div>
@@ -276,7 +308,7 @@ const fecha = ref<DateValue>()
         </section>
 
         <section id="contacto">
-            <div class="fondo_imagen w-full">
+            <div class="fondo_imagen w-full min-h-screen">
                 
                     <h1 class="absolute text-7xl font-bold text-white mt-50 ml-10 pointer-events-none">
                         ¿Te interesa...? <br> 
@@ -375,8 +407,8 @@ const fecha = ref<DateValue>()
                     
                 </div>
 
-                <div class="w-full flex justify-end items-end ">
-                    <h2 class="text-7xl font-bold text-[#d8720b] mr-10 mb-10">
+                <div class="w-full flex justify-end items-end">
+                    <h2 class="text-7xl font-bold text-[#d8720b] mr-10 mb-10 pointer-events-none">
                         ¡Gracias!
                     </h2>
                 </div>
@@ -390,12 +422,12 @@ const fecha = ref<DateValue>()
 
 
 .fondo_imagen {
-    background-image: url(../imagenes/Home/fondoPortada.png);
+    background-image: url(../imagenes/Home/fondoPortada.jpg);
     background-size: cover;
 }
 
 .fondo_imagen2 {
-    background-image: url(../imagenes/Home/fondoPortada2.png);
+    background-image: url(../imagenes/Home/fondoPortada2.jpg);
     background-size: cover;
 }
 
