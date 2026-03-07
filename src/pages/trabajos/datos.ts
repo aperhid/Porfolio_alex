@@ -1,7 +1,4 @@
 
-export interface logotipo {
-    imagen: string
-}
 
 export interface proyecto3d {
     id: number
@@ -26,7 +23,9 @@ export interface proyectoIlustracion {
   
 }
 
-
+export interface logotipo {
+    imagen: string
+}
 
 
 
@@ -40,19 +39,19 @@ export const Trabajo3d: proyecto3d[] = [
     {
         id: 1,
         titulo: 'Anillo de compromiso',
-        imagen:'homer-s.png',
+        imagen:'portada_anillo.png',
        
     },
     {
         id: 2,
         titulo: '36 days of type',
-        imagen:'homer-s.png',
+        imagen:'gif_portada_tipo.gif',
        
     },
     {
         id: 3,
-        titulo: 'Figura decorativa',
-        imagen:'homer-s.png',
+        titulo: 'Escultura pulpo',
+        imagen:'portada_pulpo.png',
        
     },
      
@@ -66,34 +65,28 @@ export const Trabajo3d: proyecto3d[] = [
 export const trabajoGrafico: proyectoGrafico[] = [
     {
         id: 0,
-        titulo: '...',
-        imagen:'homer-s.png',
+        titulo: 'Cartel Macbeth',
+        imagen:'cartel_teatral.png',
        
     },
     {
         id: 1,
-        titulo: 'Cartel teatral',
-        imagen:'homer-s.png',
+        titulo: 'Cartel Envidia',
+        imagen:'cartel_teatro.png',
        
     },
     {
         id: 2,
-        titulo: 'Revista editorial',
-        imagen:'homer-s.png',
+        titulo: 'Cartel CREFAD',
+        imagen:'cartel_CREFAD.png',
        
     },
     {
         id: 3,
-        titulo: '...',
-        imagen:'homer-s.png',
+        titulo: 'Revista editorial',
+        imagen:'portada_revista.png',
        
-    },
-    {
-        id: 4,
-        titulo: '...',
-        imagen:'homer-s.png',
-       
-    },
+    }
      
 
     
@@ -104,26 +97,26 @@ export const trabajoGrafico: proyectoGrafico[] = [
 export const trabajoIlustracion: proyectoIlustracion[] = [
     {
         id: 0,
-        titulo: 'ilustracion libro',
-        imagen:'homer-s.png',
+        titulo: 'Ilustración narrativa',
+        imagen:'portada_narrativa.png',
        
     },
     {
         id: 1,
-        titulo: 'ilustracion conceptual',
-        imagen:'homer-s.png',
+        titulo: 'Ilustracion conceptual',
+        imagen:'portada_conceptual.png',
        
     },
     {
         id: 2,
-        titulo: 'comic',
-        imagen:'homer-s.png',
+        titulo: 'Cómic',
+        imagen:'portada_comic.png',
        
     },
     {
         id: 3,
-        titulo: 'gojo',
-        imagen:'homer-s.png',
+        titulo: 'Campaña publicitaria',
+        imagen:'portada_campaña.png',
        
     },
      
@@ -136,6 +129,4 @@ export const imagenLogo: logotipo[] = [
         imagen:'logotipoBlanco.png',  
     }
      
-
-    
 ];

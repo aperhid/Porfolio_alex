@@ -34,7 +34,7 @@ const irALaPagina = (pagina: number) => {
     
   <div class="flex flex-col items-center justify-center max-w-350 my-3 mx-auto">
     <div class="text-center mt-8">
-        <h1 class="font-bold text-7xl text-white pointer-events-none">Diseño 3d</h1>
+        <h1 class="fuente text-7xl text-white pointer-events-none">Diseño 3d</h1>
         <h2 class="font-bold text-2xl text-white pointer-events-none mt-5">¡Haz click en una tarjeta para ver los detalles!</h2>
     </div>
 
@@ -55,8 +55,8 @@ const irALaPagina = (pagina: number) => {
 
         <div class="grid grid-cols-2 gap-20 mx-auto">
             <RouterLink
-            v-for="proyecto3d in lista3d"
-            :key="proyecto3d.id"
+            v-for="Trabajo3d in lista3d"
+            :key="Trabajo3d.id"
             to="/Diseño_3d/detalles"
             >
                 <Card 
@@ -66,11 +66,11 @@ const irALaPagina = (pagina: number) => {
                     class="flex flex-col gap-3 w-full"
                     >
                     <img 
-                    :src="`/imagenes/Home/trabajos/3d/${ proyecto3d.imagen }`" 
+                    :src="`/imagenes/trabajos/3d/${ Trabajo3d.imagen }`" 
                     alt=""
                     class="w-60 h-70 rounded-lg"
                     >
-                    <h2 class="font-medium text-white text-center text-lg"> {{ proyecto3d.titulo }} </h2>   
+                    <h2 class="text-white text-center text-lg"> {{ Trabajo3d.titulo }} </h2>   
                 </CardContent>
             </Card> 
             </RouterLink>
@@ -102,5 +102,9 @@ const irALaPagina = (pagina: number) => {
 
 
 <style scoped>
+
+.fuente {
+    font-family: outfit-SemiBold;
+}
 
 </style>

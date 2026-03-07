@@ -34,7 +34,7 @@ const irALaPagina = (pagina: number) => {
     
   <div class="flex flex-col items-center justify-center max-w-350 my-3 mx-auto">
     <div class="text-center mt-8">
-        <h1 class="font-bold text-7xl text-white pointer-events-none">ilustración</h1>
+        <h1 class="fuente text-7xl text-white pointer-events-none">Ilustración</h1>
         <h2 class="font-bold text-2xl text-white pointer-events-none mt-5">¡Haz click en una tarjeta para ver los detalles!</h2>
     </div>
 
@@ -64,11 +64,11 @@ const irALaPagina = (pagina: number) => {
                 >
                     <CardContent class="flex flex-col items-center gap-3 w-full">
                         <img 
-                        :src="`/imagenes/Home/trabajos/3d/${ trabajoIlustracion.imagen }`" 
+                        :src="`/imagenes/trabajos/ilustracion/${ trabajoIlustracion.imagen }`" 
                         alt=""
                         class="w-60 h-70 rounded-lg"
                         >
-                        <h2 class="font-medium text-white text-lg"> {{ trabajoIlustracion.titulo }} </h2>
+                        <h2 class="text-white text-lg"> {{ trabajoIlustracion.titulo }} </h2>
                     </CardContent>
                 </Card>     
             </RouterLink>
@@ -100,5 +100,9 @@ const irALaPagina = (pagina: number) => {
 
 
 <style scoped>
+
+.fuente {
+    font-family: outfit-SemiBold;
+}
 
 </style>

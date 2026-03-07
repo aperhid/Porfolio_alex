@@ -118,7 +118,7 @@ const fecha = ref<DateValue>()
                 alt="logotipo del Porfolio"
                 >
 
-                <h1 class="fecha">
+                <h1 class="fecha fuente">
                     2026
                 </h1>
 
@@ -310,7 +310,7 @@ const fecha = ref<DateValue>()
         <section id="contacto">
             <div class="fondo_imagen w-full min-h-screen">
                 
-                    <h1 class="absolute text-7xl font-bold text-white mt-50 ml-10 pointer-events-none">
+                    <h1 class="fuente absolute text-7xl font-bold text-white mt-50 ml-10 pointer-events-none">
                         ¿Te interesa...? <br> 
                         ¡Contáctame!
                     </h1>
@@ -408,7 +408,7 @@ const fecha = ref<DateValue>()
                 </div>
 
                 <div class="w-full flex justify-end items-end">
-                    <h2 class="text-7xl font-bold text-[#d8720b] mr-10 mb-10 pointer-events-none">
+                    <h2 class="fuente text-7xl font-bold text-[#d8720b] mr-10 mb-10 pointer-events-none">
                         ¡Gracias!
                     </h2>
                 </div>
@@ -422,6 +422,10 @@ const fecha = ref<DateValue>()
 
 <style scoped>
 
+
+.fuente {
+    font-family: outfit;
+}
 
 .fondo_imagen {
     background-image: url(../imagenes/Home/fondoPortada.jpg);
@@ -503,11 +507,11 @@ const fecha = ref<DateValue>()
         font-weight: 500;
         color: white;
         margin-top: 28rem;
+        font-family: outfit;
         
     }
 
     .titulo_info {
-        font-family: 'ClashDisplay-Medium';
         font-size: 8rem;
         font-weight: 500;
         color: white;
@@ -515,6 +519,7 @@ const fecha = ref<DateValue>()
         transform: rotate(180deg);
         margin-top: 5.5rem;
         pointer-events: none;
+        font-family: outfit;
     }
    
     .card {

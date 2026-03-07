@@ -3,6 +3,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: outfit;
+  src: url("../fuentes/Outfit-Regular.ttf");
+}
+@font-face {
+  font-family: outfit-SemiBold;
+  src: url("../fuentes/Outfit-SemiBold.ttf");
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
