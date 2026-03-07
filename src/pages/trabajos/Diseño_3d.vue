@@ -9,6 +9,7 @@ import { computed, ref } from 'vue';
 import { CircleChevronLeft, CircleChevronRight, } from 'lucide-vue-next';
 
 
+
 const enPagina = 2
 
 const paginaActual = ref(1)
@@ -53,20 +54,26 @@ const irALaPagina = (pagina: number) => {
         </div>
 
         <div class="grid grid-cols-2 gap-20 mx-auto">
-            <Card 
-            class="mt-15 cursor-pointer w-70 h-90 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-sm hover:scale-105 transition-all hover:shadow-[0_0_20px_#d8720b]"
+            <RouterLink
             v-for="proyecto3d in lista3d"
+            :key="proyecto3d.id"
+            to="/Diseño_3d/detalles"
             >
-                <CardContent class="flex flex-col items-center gap-3 w-full">
+                <Card 
+                class="mt-15 cursor-pointer w-70 h-90 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-sm hover:scale-105 transition-all hover:shadow-[0_0_20px_#d8720b]"
+                >
+                    <CardContent 
+                    class="flex flex-col gap-3 w-full"
+                    >
                     <img 
                     :src="`/imagenes/Home/trabajos/3d/${ proyecto3d.imagen }`" 
                     alt=""
                     class="w-60 h-70 rounded-lg"
                     >
-                    <h2 class="font-medium text-white text-lg"> {{ proyecto3d.titulo }} </h2>
-                    
+                    <h2 class="font-medium text-white text-center text-lg"> {{ proyecto3d.titulo }} </h2>   
                 </CardContent>
-            </Card>   
+            </Card> 
+            </RouterLink>
         </div>
 
         <div>

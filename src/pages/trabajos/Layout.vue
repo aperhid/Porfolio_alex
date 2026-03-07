@@ -32,10 +32,8 @@ const irAdelante = () => {
   }
 }
 
-const cursorRouter = useRouter();
-
 const irAPaginaTrabajos = () => {
-  cursorRouter.push({ path: '/', hash: '#trabajos' });
+  router.push({ path: '/', hash: '#trabajos' });
 };
 
 </script>

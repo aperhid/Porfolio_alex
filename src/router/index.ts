@@ -9,10 +9,11 @@ import Diseño_grafico from "@/pages/trabajos/Diseño_grafico.vue";
 
 import Ilustracion from "@/pages/trabajos/ilustracion.vue";
 
-import Layout from "@/pages/trabajos//Layout.vue";
+import Layout from "@/pages/trabajos/Layout.vue";
+
+import LayoutDetalle from "@/pages/trabajos/detalles/LayoutDetalle.vue";
 
 import Detalles from "@/pages/trabajos/detalles/Detalles.vue";
-import LayoutDetalle from "@/pages/trabajos/detalles/LayoutDetalle.vue";
 
 
 
@@ -37,20 +38,20 @@ export const router = createRouter({
               path: '',
               name: 'diseño_3d',
               component: Diseño_3d
-            },
+            }
+          ]   
+        },
+
+        {
+          path: 'detalles',
+          component: LayoutDetalle,
+          children: [
             {
               path: '',
-              component: LayoutDetalle,
-              children: [
-                {
-              path: 'trabajos_detalles',
-              name: 'trabajos_detalles',
+              name: 'detalles',
               component: Detalles
-             }
-              ]
             }
-            
-          ]   
+          ]
         }
       ]
     },
@@ -66,12 +67,19 @@ export const router = createRouter({
               name: 'diseño_gráfico',
               component: Diseño_grafico
             },
-            {
-              path: '/trabajos_detalles',
-              name: 'trabajos_detalles',
-              component: Detalles
-             }
           ]   
+        },
+
+        {
+          path: 'detalles',
+          component: LayoutDetalle,
+          children: [
+            {
+              path: '',
+              name: 'detalles',
+              component: Detalles
+            }
+          ]
         }
       ]
     
@@ -88,12 +96,19 @@ export const router = createRouter({
               name: 'ilustración',
               component: Ilustracion
             },
-            {
-              path: '/trabajos_detalles',
-              name: 'trabajos_detalles',
-              component: Detalles
-             }
+            
           ]   
+        },
+        {
+          path: 'detalles',
+          component: LayoutDetalle,
+          children: [
+            {
+              path: '',
+              name: 'detalles',
+              component: Detalles
+            }
+          ]
         }
       ]
     

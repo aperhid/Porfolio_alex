@@ -17,7 +17,7 @@ const paginaActual = ref(1)
 
 const totalPaginas = Math.ceil(trabajoGrafico.length / enPagina)
 
-const lista3d = computed(() => {
+const listaGrafico = computed(() => {
     const inicio = (paginaActual.value - 1) * enPagina
     const fin = inicio + enPagina
     return trabajoGrafico.slice(inicio, fin)
@@ -55,20 +55,28 @@ const irALaPagina = (pagina: number) => {
         </div>
 
         <div class="grid grid-cols-2 gap-20 mx-auto">
-            <Card 
-            class="mt-15 cursor-pointer w-70 h-90 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-sm hover:scale-105 transition-all hover:shadow-[0_0_20px_#d8720b]"
-            v-for="trabajoGrafico in lista3d"
+            <RouterLink 
+            v-for="trabajoGrafico in listaGrafico"
+            :key="trabajoGrafico.id"
+            to="/Diseño_3d/detalles"
             >
+                <Card 
+                class="mt-15 cursor-pointer w-70 h-90 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-sm hover:scale-105 transition-all hover:shadow-[0_0_20px_#d8720b]"
+                >
                 <CardContent class="flex flex-col items-center gap-3 w-full">
                     <img 
                     :src="`/imagenes/Home/trabajos/3d/${ trabajoGrafico.imagen }`" 
                     alt=""
                     class="w-60 h-70 rounded-lg"
                     >
-                    <h2 class="font-medium text-white text-lg"> {{ trabajoGrafico.titulo }} </h2>
-                    
+                    <h2 class="font-medium text-white text-lg"> {{ trabajoGrafico.titulo }} </h2>  
                 </CardContent>
-            </Card>   
+            </Card> 
+
+
+            </RouterLink>
+            
+              
         </div>
 
         <div>

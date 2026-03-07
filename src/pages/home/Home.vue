@@ -34,14 +34,14 @@ import type { DateValue } from 'reka-ui'
 import { ref } from 'vue'
 import { imagenLogo } from '../trabajos/datos'
 
-import { ProgramasInfo, type programasInfo } from './programasInfo'
+import { ProgramasInfo } from './programasInfo'
 
 
 
 
-const imagenInformacion = ref<string>('homer-s.png')
+const imagenInformacion = ref('homer-s.png')
 
-const listaProgramas = ref<programasInfo[]>( ProgramasInfo )
+const listaProgramas = ref(ProgramasInfo)
 
 const scrollToSection = (sectionId: string) => {
     if (sectionId === '#') {
@@ -65,7 +65,7 @@ const fecha = ref<DateValue>()
         <nav class="navegador flex flex-col sm:flex-row justify-between">
 
                  <NavigationMenu>
-                    <NavigationMenuList class="flex flex-col ml-5 sm:flex-row">
+                    <NavigationMenuList class="flex flex-col sm:flex-row">
                         
                     <NavigationMenuItem>
                         <a href="#" @click.prevent="scrollToSection('#')">
@@ -107,7 +107,7 @@ const fecha = ref<DateValue>()
                 </div>
         </nav>
 
-        <section class="fondo_imagen w-full h-[90vh] lg:min-w-screen lg:min-h-screen">
+        <section class="fondo_imagen w-full h-[90vh] min-w-screen min-h-screen">
            <div 
             v-for="logotipo in imagenLogo"
             :key="logotipo.imagen"
@@ -156,7 +156,7 @@ const fecha = ref<DateValue>()
                                 DISEÑO GRÁFICO
                             </h1>
                      
-                                <RouterLink to="/diseño_gráfico"> 
+                                <RouterLink to="diseño_gráfico"> 
                                     <ArrowUp class="mt-7 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
                                 </RouterLink>
                         </CardContent>
@@ -170,7 +170,7 @@ const fecha = ref<DateValue>()
                                 ILUSTRACIÓN
                             </h1>
 
-                                <RouterLink to="/ilustración"> 
+                                <RouterLink to="ilustración"> 
                                     <ArrowUp class="mt-7 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
                                 </RouterLink>
                         </CardContent>
@@ -204,7 +204,7 @@ const fecha = ref<DateValue>()
                         <Card class="w-150 h-75 rounded-b-none rounded-l-none rounded-tr-3xl border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                             <CardContent >
                                 <div class="flex flex-col gap-3">
-                                    <p class="text-white pointer-events-none">¡Hola! Soy Álex, estudiante de diseño y un apasionado de todas las ramas artísticas. En cada proyecto, ofrezco un matiz... </p>
+                                    <p class="text-white pointer-events-none">¡Hola! Soy Álex, estudiante de diseño y un apasionado de todas las ramas artísticas. Ofrezco creatividad, estética y atención al detalle en cada proyecto. </p>
                                     <Separator />
 
                                     <div class="flex justify-between py-2">
@@ -368,7 +368,7 @@ const fecha = ref<DateValue>()
 
                                         <Button
                                             type="submit"
-                                            class="w-full bg-[#d8720b] text-black hover:text-[#d8720b] scale-95 text-md mt-4 cursor-pointer py-3 rounded-full font-semibold transition-all">
+                                            class="w-full bg-[#d8720b] text-black hover:text-[#d8720b] text-md mt-4 cursor-pointer py-3 rounded-full font-semibold transition-all">
                                                 Enviar solicitud
                                         </Button>
 
@@ -418,6 +418,8 @@ const fecha = ref<DateValue>()
     </div>
 </template>
 
+
+
 <style scoped>
 
 
@@ -437,9 +439,18 @@ const fecha = ref<DateValue>()
     bottom: 40px; 
     left: 5%;
     width: 40vw; 
-    max-width: 600px; 
+    max-width: 900px; 
     height: auto;
 }
+
+    .imagenLogo {
+        position: absolute;
+        bottom: 40px; 
+        left: 5%;
+        width: 40vw; 
+        max-width: 900px; 
+        height: auto;
+    }   
 
 .fecha {
     color: #d8720b;
@@ -450,7 +461,6 @@ const fecha = ref<DateValue>()
     font-weight: bold;
     pointer-events: none;
 }
-    /* móvil */
     .navegador {
         background-color: blue;
         opacity: 0.7;
@@ -497,6 +507,7 @@ const fecha = ref<DateValue>()
     }
 
     .titulo_info {
+        font-family: 'ClashDisplay-Medium';
         font-size: 8rem;
         font-weight: 500;
         color: white;

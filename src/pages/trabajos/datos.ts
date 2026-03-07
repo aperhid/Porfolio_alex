@@ -34,7 +34,7 @@ export const Trabajo3d: proyecto3d[] = [
     {
         id: 0,
         titulo: 'MOOD',
-        imagen:'homer-s.png',
+        imagen:'portada_mood.png',
        
     },
     {
