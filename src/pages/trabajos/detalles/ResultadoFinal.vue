@@ -33,8 +33,13 @@ const detalle = categoria.find(d => d.id === id)
 
 
 <template>
-    <div>
-        <h1> {{ detalle?.resultado }}</h1>
+    <div class="grid grid-cols-3 gap-10">
+        <img
+        class="rounded object-container"
+        v-for="(img, i) in detalle?.resultado"
+        :key="i"
+        :src="`/imagenes/trabajos/resultado/${img}`"
+        />
     </div>
 </template>
 

@@ -33,7 +33,7 @@ const detalle = categoria.find(d => d.id === id)
 
 
 <template>
-      <p class="text-white" style="white-space: pre-line"> {{ detalle?.explicacion }}</p>
+      <p class="text-white pointer-events-none" style="white-space: pre-line"> {{ detalle?.explicacion }}</p>
     
 </template>
 

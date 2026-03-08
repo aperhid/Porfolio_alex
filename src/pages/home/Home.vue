@@ -39,7 +39,7 @@ import { ProgramasInfo } from './programasInfo'
 
 
 
-const imagenInformacion = ref('homer-s.png')
+const imagenInformacion = ref('imagen_info2.png')
 
 const listaProgramas = ref(ProgramasInfo)
 
@@ -191,11 +191,11 @@ const fecha = ref<DateValue>()
                     <Card class="w-80 h-150 rounded-r-none border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                         <CardContent>
                              <img 
-                                class="object-contain h-137 w-75" 
-                                :src="`/imagenes/${ imagenInformacion }`" 
+                                class="object-cover h-137 w-75" 
+                                :src="`/imagenes/informacion/${ imagenInformacion }`" 
                                 alt=""
-                                @mouseenter="imagenInformacion='foto.jpg'"
-                                @mouseleave="imagenInformacion='homer-s.png'"
+                                @mouseenter="imagenInformacion='imagen_info2.png'"
+                                @mouseleave="imagenInformacion='imagen_info.png'"
                                 >
                         </CardContent>
                     </Card>
