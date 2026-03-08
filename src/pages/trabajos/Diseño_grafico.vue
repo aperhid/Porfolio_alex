@@ -58,7 +58,7 @@ const irALaPagina = (pagina: number) => {
             <RouterLink 
             v-for="trabajoGrafico in listaGrafico"
             :key="trabajoGrafico.id"
-            to="/Diseño_3d/detalles"
+            :to="{ name: 'detalles-explicacion-grafico', params: { id: trabajoGrafico.id } }"
             >
                 <Card 
                 class="mt-15 cursor-pointer w-70 h-90 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-sm hover:scale-105 transition-all hover:shadow-[0_0_20px_#d8720b]"

@@ -54,9 +54,7 @@ export const Trabajo3d: proyecto3d[] = [
         imagen:'portada_pulpo.png',
        
     },
-     
-
-    
+         
 ];
 
 

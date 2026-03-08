@@ -138,7 +138,7 @@ const fecha = ref<DateValue>()
                     <Card class="w-80 h-110 border border-[rgba(255,255,255,0.4)] bg-gradient-to-br from-[#d8720b]/40 via-black/20 to-[#d8720b]/40 backdrop-blur-sm hover:scale-105 transition-transform">
                         <CardContent class="flex flex-col items-center">
                             <img class="w-70 h-60 object-cover object-top mt-2 rounded-md"
-                            src="../imagenes/Home/homer-s.png" alt="">
+                            src="/imagenes/Home/fondo_3d.png" alt="">
                             <h1 class="mt-9 font-medium text-2xl pointer-events-none text-white">
                                 DISEÑO 3D
                             </h1>
@@ -151,7 +151,7 @@ const fecha = ref<DateValue>()
                     <Card class="w-80 h-110 border border-[rgba(255,255,255,0.4)] bg-gradient-to-br from-[#d8720b]/40 via-black/20 to-[#d8720b]/40 backdrop-blur-sm hover:scale-105 transition-transform">
                         <CardContent class="flex flex-col items-center">
                             <img class="w-70 h-60 object-cover object-top mt-2 rounded-md"
-                            src="../imagenes/Home/homer-s.png" alt="">
+                            src="/imagenes/Home/fondo_grafico.png" alt="">
                             <h1 class="mt-9 font-medium text-2xl pointer-events-none text-white">
                                 DISEÑO GRÁFICO
                             </h1>
@@ -165,7 +165,7 @@ const fecha = ref<DateValue>()
                       <Card class="w-80 h-110 border border-[rgba(255,255,255,0.4)] bg-gradient-to-br from-[#d8720b]/40 via-black/20 to-[#d8720b]/40 backdrop-blur-sm hover:scale-105 transition-transform">
                         <CardContent class="flex flex-col items-center">
                             <img class="w-70 h-60 object-cover object-top mt-2 rounded-md"
-                            src="../imagenes/Home/homer-s.png" alt="">
+                            src="/imagenes/Home/fondo_ilustracion.png" alt="">
                             <h1 class="mt-9 font-medium text-2xl pointer-events-none text-white">
                                 ILUSTRACIÓN
                             </h1>

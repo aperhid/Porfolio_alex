@@ -9,7 +9,6 @@ import { computed, ref } from 'vue';
 import { CircleChevronLeft, CircleChevronRight, } from 'lucide-vue-next';
 
 
-
 const enPagina = 2
 
 const paginaActual = ref(1)
@@ -57,7 +56,7 @@ const irALaPagina = (pagina: number) => {
             <RouterLink
             v-for="Trabajo3d in lista3d"
             :key="Trabajo3d.id"
-            to="/Diseño_3d/detalles"
+            :to="{ name: 'detalles-explicacion-3d', params: { id: Trabajo3d.id } }"
             >
                 <Card 
                 class="mt-15 cursor-pointer w-70 h-90 border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-sm hover:scale-105 transition-all hover:shadow-[0_0_20px_#d8720b]"

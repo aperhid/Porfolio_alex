@@ -1,6 +1,15 @@
 
 <script setup lang="ts">
 
+import { useRoute } from 'vue-router';
+import { Detalles3d } from './detalles3d';
+
+const route = useRoute()
+
+const id = Number(route.params.id)
+
+const detalle = Detalles3d.find(d => d.id === id)
+
 </script>
 
 
@@ -8,7 +17,7 @@
 
 <template>
     <div>
-        <h1>explicacion del proyecto</h1>
+        <h1> {{ detalle?.explicacion }}</h1>
     </div>
 </template>
 

@@ -13,7 +13,10 @@ import Layout from "@/pages/trabajos/Layout.vue";
 
 import LayoutDetalle from "@/pages/trabajos/detalles/LayoutDetalle.vue";
 
-import Detalles from "@/pages/trabajos/detalles/Detalles.vue";
+import Explicacion from "@/pages/trabajos/detalles/Explicacion.vue";
+import Bocetos from "@/pages/trabajos/detalles/Bocetos.vue";
+import Proceso from "@/pages/trabajos/detalles/Proceso.vue";
+import ResultadoFinal from "@/pages/trabajos/detalles/ResultadoFinal.vue";
 
 
 
@@ -43,14 +46,29 @@ export const router = createRouter({
         },
 
         {
-          path: 'detalles',
+          path: 'detalles/:id',
           component: LayoutDetalle,
           children: [
             {
               path: '',
-              name: 'detalles',
-              component: Detalles
-            }
+              name: 'detalles-explicacion-3d',
+              component: Explicacion
+            },
+            {
+              path: 'bocetos',
+              name: 'detalles-bocetos-3d',
+              component: Bocetos
+            },
+            {
+              path: 'proceso',
+              name: 'detalles-proceso-3d',
+              component: Proceso
+            },
+            {
+              path: 'resultado',
+              name: 'detalles-resultado-3d',
+              component: ResultadoFinal
+            },
           ]
         }
       ]
@@ -71,16 +89,33 @@ export const router = createRouter({
         },
 
         {
-          path: 'detalles',
+          path: 'detalles/:id',
           component: LayoutDetalle,
           children: [
             {
               path: '',
-              name: 'detalles',
-              component: Detalles
-            }
+              name: 'detalles-explicacion-grafico',
+              component: Explicacion
+            },
+            {
+              path: 'bocetos',
+              name: 'detalles-bocetos-grafico',
+              component: Bocetos
+            },
+            {
+              path: 'proceso',
+              name: 'detalles-proceso-grafico',
+              component: Proceso
+            },
+            {
+              path: 'resultado',
+              name: 'detalles-resultado-grafico',
+              component: ResultadoFinal
+            },
           ]
         }
+
+        
       ]
     
     },
@@ -99,15 +134,31 @@ export const router = createRouter({
             
           ]   
         },
+
         {
-          path: 'detalles',
+          path: 'detalles/:id',
           component: LayoutDetalle,
           children: [
             {
               path: '',
-              name: 'detalles',
-              component: Detalles
-            }
+              name: 'detalles-explicacion-ilustracion',
+              component: Explicacion
+            },
+            {
+              path: 'bocetos',
+              name: 'detalles-bocetos-ilustracion',
+              component: Bocetos
+            },
+            {
+              path: 'proceso',
+              name: 'detalles-proceso-ilustracion',
+              component: Proceso
+            },
+            {
+              path: 'resultado',
+              name: 'detalles-resultado-ilustracion',
+              component: ResultadoFinal
+            },
           ]
         }
       ]

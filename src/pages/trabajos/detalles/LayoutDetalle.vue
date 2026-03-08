@@ -2,7 +2,33 @@
 import Button from '@/components/ui/button/Button.vue';
 import Card from '@/components/ui/card/Card.vue';
 import CardContent from '@/components/ui/card/CardContent.vue';
+import { useRoute, useRouter } from 'vue-router';
 
+const route = useRoute()
+const router = useRouter()
+
+let categoria = ''
+
+if (route.path.includes('Diseño_3d')) {
+  categoria = '3d'
+}
+
+if (route.path.includes('Diseño_gráfico')) {
+  categoria = 'grafico'
+}
+
+if (route.path.includes('ilustracion')) {
+  categoria = 'ilustracion'
+} 
+
+
+const rutaExplicacion = `detalles-explicacion-${categoria}`
+
+const rutaBocetos = `detalles-bocetos-${categoria}`
+
+const rutaProceso = `detalles-proceso-${categoria}`
+
+const rutaResultado = `detalles-resultado-${categoria}`
 
 
 
@@ -16,7 +42,7 @@ import CardContent from '@/components/ui/card/CardContent.vue';
         <CardContent class="flex flex-col justify-between h-full">
 
             <RouterLink 
-            to="Explicación"
+            :to="{ name: rutaExplicacion, params: { id: route.params.id } }"
             class="text-white text-center hover:bg-[rgba(255,255,255,0.15)] p-2 rounded"
             active-class="font-bold"
             >
@@ -24,7 +50,7 @@ import CardContent from '@/components/ui/card/CardContent.vue';
             </RouterLink>
 
             <RouterLink
-            to="Bocetos"
+            :to="{ name: rutaBocetos, params: { id: route.params.id } }"
             class="text-white text-center hover:bg-[rgba(255,255,255,0.15)] p-2 rounded"
             active-class="font-bold"
             >
@@ -32,7 +58,7 @@ import CardContent from '@/components/ui/card/CardContent.vue';
             </RouterLink>
 
             <RouterLink 
-            to="Proceso"
+            :to="{ name: rutaProceso, params: { id: route.params.id } }"
             class="text-white text-center hover:bg-[rgba(255,255,255,0.15)] p-2 rounded"
             active-class="font-bold"
              >
@@ -40,7 +66,7 @@ import CardContent from '@/components/ui/card/CardContent.vue';
             </RouterLink>
 
             <RouterLink
-            to="Resultado"
+            :to="{ name: rutaResultado, params: { id: route.params.id } }"
             class="text-white text-center hover:bg-[rgba(255,255,255,0.15)] p-2 rounded"
             active-class="font-bold"
             >
@@ -48,6 +74,7 @@ import CardContent from '@/components/ui/card/CardContent.vue';
             </RouterLink>
 
             <Button
+            @click="router.back()"
             class="bg-[#d8720b] text-black hover:text-[#d8720b] text-md cursor-pointer py-3 rounded-lg font-semibold transition-all">
                 atrás
             </Button>
@@ -57,7 +84,7 @@ import CardContent from '@/components/ui/card/CardContent.vue';
 
       <Card class="h-150 w-200 border rounded-l-none border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-sm">
         <CardContent>
-
+            <RouterView />
         </CardContent>
       </Card>
 
