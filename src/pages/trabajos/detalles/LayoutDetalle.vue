@@ -7,6 +7,7 @@ import { useRoute, useRouter } from 'vue-router';
 const route = useRoute()
 const router = useRouter()
 
+
 let categoria = ''
 
 if (route.path.includes('Diseño_3d')) {
@@ -29,6 +30,7 @@ const rutaBocetos = `detalles-bocetos-${categoria}`
 const rutaProceso = `detalles-proceso-${categoria}`
 
 const rutaResultado = `detalles-resultado-${categoria}`
+
 
 
 let rutaTrabajos = ''

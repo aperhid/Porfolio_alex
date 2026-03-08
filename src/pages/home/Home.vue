@@ -497,8 +497,7 @@ const fecha = ref<DateValue>()
             justify-content: center;
             margin-right: 50px;
             pointer-events: none;
-            color: white;
-            
+            color: white;            
         }   
     }
 

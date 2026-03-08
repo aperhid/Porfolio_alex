@@ -12,28 +12,28 @@ export interface detalles3d {
 export const Detalles3d: detalles3d[] = [
     {
         id: 0,
-        explicacion: 'explicacion 3d 1',
+        explicacion: 'La creación de este juego de mesa surge con el objetivo de brindar apoyo emocional a las personas mediante dinámicas que fomentan la reflexión, la expresión y la conexión personal. Cada elemento del juego está pensado para generar experiencias que promuevan la empatía, el autoconocimiento y la gestión de emociones de manera lúdica.\n\nUna parte central del trabajo fue diseñar las figuras del juego en 3D, las cuales representan una emoción. Primero se modelaron en Blender, cuidando cada detalle para que fueran atractivas y simbólicas, reflejando la intención emocional de cada pieza. Posteriormente, se llevaron esos modelos al mundo físico mediante impresion 3d, seleccionando los materiales y acabados adecuados que aseguraron piezas especiales.',
         bocetos: ['bocetos 3d 1'],
         proceso: ['proceso 3d 1'],
         resultado: ['resultado 3d 1']   
     },
     {
         id: 1,
-        explicacion: 'explicacion 3d 2',
+        explicacion: 'La creación de este anillo de compromiso se realizó completamente en Blender, con especial atención al modelado detallado del aro y la colocación de las piedras incrustadas para que cada elemento fuera preciso y elegante. Durante el proceso, trabajé cuidadosamente las texturas, los materiales y el renderizado, ajustando la luz y los reflejos del diamante central para lograr un acabado realista, uno donde destacara tanto el brillo de las gemas como el pulido del metal.\n\nEl resultado final es una representación digital fiel y visualmente atractva del anillo con su caja aterciopelada, lista para presentaciones o propuestas de diseño.',
         bocetos: ['bocetos 3d 2'],
         proceso: ['proceso 3d 2'],
         resultado: ['resultado 3d 2']  
     },
     {
         id: 2,
-        explicacion: 'explicacion 3d 3',
+        explicacion: 'En mi participación en 36 Days of Type, exploré la tipogradía a través de la inspiración marina, creando tres letras únicas completamente en Blender. Cada una cuenta su propia historia:\nLa S se transforma en un pulpo cuyos tentáculos se enroscan y se despliegan de manera orgánica, transmitiendo movimiento y vida. La V imita la compleja estructura de un coral, mostrando texturas irregulares y dormas que recuerdan a la riqueza del mar. La O evoca la suavidad porosa de una esponja marina.\n\nPara lograr un realismo convincente, combiné texturas digitales con escaneos de materiales reales: una red, una esponja y un plástico. Las tres usadas para el fondo. Además, se cuidó cada detalle lumínico y de renderizado para que la luz interactuara con las formas de manera natural.\nEste proyecto no solo destaca la creatividad en el modelado 3D, sino también la capacidad de fusionar arte, textura y luz, transportando al espectador a un universo submarino con cada letra.',
         bocetos: ['bocetos 3d 3'],
         proceso: ['proceso 3d 3'],
         resultado: ['resultado 3d 3']   
     },
     {
         id: 3,
-        explicacion: 'explicacion 3d 4',
+        explicacion: 'En este proyecto de escultura se creó una figura decorativa con forma de pulpo utilizando exclusivamente Sculpey. La pieza se inició con un esqueleto de alambre y papel de aluminio que establecía la postura, el volumen y la estructura general del cuerpo, sobre el cual se trabajó la masa. Después, se alisó la superficie y se modeló cuidadosamente cada detalle para lograr un resultado realista. La anatomía del pulpo fue estudiada con tal de reflejar proporciones auténticas y transmitir dinamismo en los tentáculos y la postura del cuerpo.\n\nUna vez finalizada el modelado, la figura se horneó siguiendo las indicaciones del material y se pintó a mano con tonos azules y matices dorados, resaltando texturas y creando un efecto decorativo elegante. Cada etapa del proceso, desde la planificación hasta el acabado final, buscó combinar realismo anatómico y expresión artística, logrando una escultura que es tanto visualmente atractiva como técnicamente detallada.',
         bocetos: ['bocetos 3d 4'],
         proceso: ['proceso 3d 4'],
         resultado: ['resultado 3d 4']   
