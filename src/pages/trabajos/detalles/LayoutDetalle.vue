@@ -31,6 +31,12 @@ const rutaProceso = `detalles-proceso-${categoria}`
 const rutaResultado = `detalles-resultado-${categoria}`
 
 
+let rutaTrabajos = ''
+
+if (categoria === '3d') rutaTrabajos = 'diseño_3d'
+else if (categoria === 'grafico') rutaTrabajos = 'diseño_gráfico'
+else if (categoria === 'ilustracion') rutaTrabajos = 'ilustracion'
+
 
 </script>
 
@@ -44,7 +50,7 @@ const rutaResultado = `detalles-resultado-${categoria}`
             <RouterLink 
             :to="{ name: rutaExplicacion, params: { id: route.params.id } }"
             class="text-white text-center hover:bg-[rgba(255,255,255,0.15)] p-2 rounded"
-            active-class="font-bold"
+            exact-active-class="font-bold bg-[rgba(255,255,255,0.15)]"
             >
                 Explicación
             </RouterLink>
@@ -52,7 +58,7 @@ const rutaResultado = `detalles-resultado-${categoria}`
             <RouterLink
             :to="{ name: rutaBocetos, params: { id: route.params.id } }"
             class="text-white text-center hover:bg-[rgba(255,255,255,0.15)] p-2 rounded"
-            active-class="font-bold"
+            exact-active-class="font-bold bg-[rgba(255,255,255,0.15)]"
             >
                 Bocetos
             </RouterLink>
@@ -60,7 +66,7 @@ const rutaResultado = `detalles-resultado-${categoria}`
             <RouterLink 
             :to="{ name: rutaProceso, params: { id: route.params.id } }"
             class="text-white text-center hover:bg-[rgba(255,255,255,0.15)] p-2 rounded"
-            active-class="font-bold"
+            exact-active-class="font-bold bg-[rgba(255,255,255,0.15)]"
              >
                 Proceso
             </RouterLink>
@@ -68,13 +74,13 @@ const rutaResultado = `detalles-resultado-${categoria}`
             <RouterLink
             :to="{ name: rutaResultado, params: { id: route.params.id } }"
             class="text-white text-center hover:bg-[rgba(255,255,255,0.15)] p-2 rounded"
-            active-class="font-bold"
+            exact-active-class="font-bold bg-[rgba(255,255,255,0.15)]"
             >
                 Resultado
             </RouterLink>
 
             <Button
-            @click="router.back()"
+            @click="router.push({name:rutaTrabajos})"
             class="bg-[#d8720b] text-black hover:text-[#d8720b] text-md cursor-pointer py-3 rounded-lg font-semibold transition-all">
                 atrás
             </Button>

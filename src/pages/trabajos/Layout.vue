@@ -10,7 +10,7 @@ const router = useRouter()
 const paginas = [
   'diseño_3d',
   'diseño_gráfico',
-  'ilustración'
+  'ilustracion'
 ]
 
 const apartadoActual = computed(() =>

@@ -14,8 +14,11 @@ import Layout from "@/pages/trabajos/Layout.vue";
 import LayoutDetalle from "@/pages/trabajos/detalles/LayoutDetalle.vue";
 
 import Explicacion from "@/pages/trabajos/detalles/Explicacion.vue";
+
 import Bocetos from "@/pages/trabajos/detalles/Bocetos.vue";
+
 import Proceso from "@/pages/trabajos/detalles/Proceso.vue";
+
 import ResultadoFinal from "@/pages/trabajos/detalles/ResultadoFinal.vue";
 
 
@@ -120,7 +123,7 @@ export const router = createRouter({
     
     },
     {
-      path: '/ilustración',
+      path: '/ilustracion',
       children: [
         {
           path: '',
@@ -128,7 +131,7 @@ export const router = createRouter({
           children: [
             {
               path: '',
-              name: 'ilustración',
+              name: 'ilustracion',
               component: Ilustracion
             },
             

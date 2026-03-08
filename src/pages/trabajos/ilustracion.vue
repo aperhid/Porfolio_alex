@@ -16,7 +16,7 @@ const paginaActual = ref(1)
 
 const totalPaginas = Math.ceil(trabajoIlustracion.length / enPagina)
 
-const lista3d = computed(() => {
+const listaIlustracion = computed(() => {
     const inicio = (paginaActual.value - 1) * enPagina
     const fin = inicio + enPagina
     return trabajoIlustracion.slice(inicio, fin)
@@ -55,7 +55,7 @@ const irALaPagina = (pagina: number) => {
 
         <div class="grid grid-cols-2 gap-20 mx-auto">
             <RouterLink
-            v-for="trabajoIlustracion in lista3d"
+            v-for="trabajoIlustracion in listaIlustracion"
             :key="trabajoIlustracion.id"
             :to="{ name: 'detalles-explicacion-ilustracion', params: { id: trabajoIlustracion.id } }"
             >

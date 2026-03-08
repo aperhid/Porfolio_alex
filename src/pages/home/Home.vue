@@ -170,7 +170,7 @@ const fecha = ref<DateValue>()
                                 ILUSTRACIÓN
                             </h1>
 
-                                <RouterLink to="ilustración"> 
+                                <RouterLink to="ilustracion"> 
                                     <ArrowUp class="mt-7 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
                                 </RouterLink>
                         </CardContent>
