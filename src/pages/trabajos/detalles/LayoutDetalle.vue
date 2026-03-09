@@ -84,7 +84,7 @@ else if (categoria === 'ilustracion') rutaTrabajos = 'ilustracion'
             <Button
             @click="router.push({name:rutaTrabajos})"
             class="bg-[#d8720b] text-black hover:text-[#d8720b] text-md cursor-pointer py-3 rounded-lg font-semibold transition-all">
-                atrás
+                Atrás
             </Button>
 
         </CardContent>

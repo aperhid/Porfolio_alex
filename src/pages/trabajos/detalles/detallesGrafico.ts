@@ -10,8 +10,8 @@ export const DetallesGrafico: detallesGrafico[] = [
     {
         id: 0,
         explicacion: 'En este proyecto se diseñó un cartel para la obra Macbeth con un enfoque en composición y simplicidad, buscando transmitir un mensaje potente con un único elemento visual. La ilustración central es una mancha de sangre con forma de corona, creada inicialmente de manera manual con tinta china, capturando la textura y la fluidez natural de la tinta. Posteriormente, realicé retoques digitales para integrarla perfectamente en el cartel, ajustando forma, color y contraste.\n\nLa tipografía utilizada es serifa, escogida para aportar elegancia y solidez al mensaje, mientras que la composición se mantiene limpia y centrada, permitiendo que la ilutración sea el foco de atención. Este trabajo combina tradición manual y técnicas digitales, logrando un cartel que comunica de forma directa y visualmente impactante la esencia dramática de Macbeth.',
-        bocetos: ['bocetos grafico 1'],
-        proceso: ['proceso grafico 1'],
+        bocetos: ['grafico_boceto_macbeth.png', 'grafico_boceto_macbeth2.png'],
+        proceso: ['grafico_proceso_macbeth.png', 'grafico_proceso_macbeth2.png'],
         resultado: ['grafico_resultado_macbeth.png']   
     },
     {
@@ -31,7 +31,7 @@ export const DetallesGrafico: detallesGrafico[] = [
     {
         id: 3,
         explicacion: 'En este proyecto desarrollé una revista tipográfica centrada en la salud mental de los diseñadores, con un enfoque editorial muy cuidado. La composición fue meticulosa, siguiendo estrictamente las reglas del diseño editorial para lograr un resultado limpio, ordenado y fácil de leer.\n\nEl font pairing fue cuidadosamente seleccionado para transmitir claridad y jerarquía visual, mientras que el uso de una única tinta turquesa en los detalles permitió crear contraste y cohesión sin sobrecargar las páginas. Este proyecto combina tipografía, composición y diseño editorial, mostrando cómo un enfoque minimalista y controlado puede comunicar de manera efectiva un tema sensible y relevante para la comunidad de diseñadores.',
-        bocetos: ['bocetos grafico 4'],
+        bocetos: [],
         proceso: ['grafico_proceso_revista.png', 'grafico_proceso_revista5.png', 'grafico_proceso_revista2.png', 'grafico_proceso_revista3.png', 'grafico_proceso_revista4.png'],
         resultado: ['grafico_resultado_revista.png', 'grafico_resultado_revista5.png', 'grafico_resultado_revista2.png', 'grafico_resultado_revista3.png', 'grafico_resultado_revista4.png']  
     }

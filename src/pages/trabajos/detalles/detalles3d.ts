@@ -20,7 +20,7 @@ export const Detalles3d: detalles3d[] = [
     {
         id: 1,
         explicacion: 'La creación de este anillo de compromiso se realizó completamente en Blender, con especial atención al modelado detallado del aro y la colocación de las piedras incrustadas para que cada elemento fuera preciso y elegante. Durante el proceso, trabajé cuidadosamente las texturas, los materiales y el renderizado, ajustando la luz y los reflejos del diamante central para lograr un acabado realista, uno donde destacara tanto el brillo de las gemas como el pulido del metal.\n\nEl resultado final es una representación digital fiel y visualmente atractva del anillo con su caja aterciopelada, lista para presentaciones o propuestas de diseño.',
-        bocetos: ['bocetos 3d 2'],
+        bocetos: [],
         proceso: ['3d_proceso_2.1.png', '3d_proceso_2.2.png', '3d_proceso_2.3.png'],
         resultado: ['3d_resultado_2.1.png', '3d_resultado_2.2.png', '3d_resultado_2.3.png']  
     },
@@ -34,8 +34,8 @@ export const Detalles3d: detalles3d[] = [
     {
         id: 3,
         explicacion: 'En este proyecto de escultura se creó una figura decorativa con forma de pulpo utilizando exclusivamente Sculpey. La pieza se inició con un esqueleto de alambre y papel de aluminio que establecía la postura, el volumen y la estructura general del cuerpo, sobre el cual se trabajó la masa. Después, se alisó la superficie y se modeló cuidadosamente cada detalle para lograr un resultado realista. La anatomía del pulpo fue estudiada con tal de reflejar proporciones auténticas y transmitir dinamismo en los tentáculos y la postura del cuerpo.\n\nUna vez finalizada el modelado, la figura se horneó siguiendo las indicaciones del material y se pintó a mano con tonos azules y matices dorados, resaltando texturas y creando un efecto decorativo elegante. Cada etapa del proceso, desde la planificación hasta el acabado final, buscó combinar realismo anatómico y expresión artística, logrando una escultura que es tanto visualmente atractiva como técnicamente detallada.',
-        bocetos: ['bocetos 3d 4'],
-        proceso: ['proceso 3d 4'],
-        resultado: ['resultado 3d 4']   
+        bocetos: ['boceto_pulpo.png', '3d_boceto_pulpo.png'],
+        proceso: ['3d_proceso_pulpo5.png', '3d_proceso_pulpo.png', '3d_proceso_pulpo2.png', '3d_proceso_pulpo3.png', '3d_proceso_pulpo4.png'],
+        resultado: ['3d_resultado_pulpo.png', '3d_resultado_pulpo2.png']   
     }
 ]
