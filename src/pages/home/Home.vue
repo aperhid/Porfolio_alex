@@ -9,33 +9,19 @@ import {
   CardContent,
 } from '@/components/ui/card'
 
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
-
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover'
-
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 
 import { Button } from '@/components/ui/button'
 
-import { Calendar } from '@/components/ui/calendar'
-
-import type { DateValue } from 'reka-ui'
 import { ref } from 'vue'
 import { imagenLogo } from '../trabajos/datos'
 
 import { ProgramasInfo } from './programasInfo'
 
+import navegacion from '@/components/navegacion.vue'
+
+import popover from '@/components/popover.vue'
 
 
 
@@ -43,69 +29,13 @@ const imagenInformacion = ref('imagen_info2.png')
 
 const listaProgramas = ref(ProgramasInfo)
 
-const scrollToSection = (sectionId: string) => {
-    if (sectionId === '#') {
-    window.scrollTo({top: 0, behavior:'smooth'})
-    }
-
-    const elemento = document.querySelector<HTMLElement>(sectionId);
-    if( elemento ) {
-        elemento.scrollIntoView({ behavior:'smooth', block:'start' })
-    }
-}
-
-const fecha = ref<DateValue>()
-
 </script>
 
 <template>
 
     <div class="overflow-x-hidden">
 
-        <nav class="navegador flex flex-row justify-between items-center gap-2 p-1.5 fixed transition-all">
-
-                 <NavigationMenu>
-                    <NavigationMenuList class="flex flex-row gap-2">
-                        
-                    <NavigationMenuItem>
-                        <a href="#" @click.prevent="scrollToSection('#')">
-                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-white bg-transparent hover:text-white hover:scale-105 hover:bg-transparent hover:underline transition-all']">
-                             Inicio   
-                            </NavigationMenuLink>
-                        </a>
-                    </NavigationMenuItem>
-
-                    <NavigationMenuItem>
-                        <a href="#" @click.prevent="scrollToSection('#trabajos')">
-                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-white bg-transparent hover:text-white hover:scale-105 hover:bg-transparent hover:underline transition-all']">
-                             Trabajos    
-                            </NavigationMenuLink>
-                        </a>
-                    </NavigationMenuItem>
-
-                    <NavigationMenuItem>
-                        <a href="#" @click.prevent="scrollToSection('#información')">
-                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-white bg-transparent hover:text-white hover:scale-105 hover:bg-transparent hover:underline transition-all']">
-                             Información    
-                            </NavigationMenuLink>
-                        </a>
-                    </NavigationMenuItem>
-
-                    <NavigationMenuItem>
-                        <a href="#" @click.prevent="scrollToSection('#contacto')">
-                            <NavigationMenuLink :class="[navigationMenuTriggerStyle(), 'text-white bg-transparent hover:text-white hover:scale-105 hover:bg-transparent hover:underline transition-all']">
-                             Contacto    
-                            </NavigationMenuLink>
-                        </a>
-                    </NavigationMenuItem>
-
-                    </NavigationMenuList>
-                </NavigationMenu>
-
-                <div class="nombre hidden sm:block">
-                    Álex Pérez Hidalgo
-                </div>
-        </nav>
+        <navegacion />
 
         <section class="fondo_imagen w-full h-[90vh] min-w-screen min-h-screen">
            <div
@@ -349,21 +279,7 @@ const fecha = ref<DateValue>()
                                         </div>
 
                                         <div class="space-y-2">
-                                                <Popover required>
-                                                    <PopoverTrigger asChild> 
-                                                        <Button class="w-full border border-[rgba(255,255,255,0.4)] bg-transparent hover:bg-[rgba(255,255,255,0.3)] cursor-pointer backdrop-blur-md"> 
-                                                            <span v-if="fecha">
-                                                                {{ fecha.day }}/{{ fecha.month }}/{{ fecha.year }}
-                                                            </span>
-                                                            <span v-else>
-                                                                Selecciona una fecha.
-                                                            </span>
-                                                        </Button>
-                                                    </PopoverTrigger>
-                                                    <PopoverContent>
-                                                        <Calendar v-model="fecha"/>
-                                                    </PopoverContent>
-                                                </Popover>
+                                            <popover />
                                         </div>
 
                                         <Button
@@ -489,33 +405,6 @@ const fecha = ref<DateValue>()
         margin-right: 1.5rem;
     }
 }
-
-    .navegador {
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 2rem 2rem 2rem 2rem;
-        backdrop-filter: blur(0.3rem);
-        opacity: 1;
-        margin-top: 17px;
-        z-index: 1;
-        margin-right: 2rem;
-        margin-left: 3rem;
-
-    }
-
-    @media (min-width: 640px) {
-        .navegador {
-            width: calc(100% - 40px);
-            height: 50px;
-            margin-top: 17px;
-            margin-left: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(0.3rem);
-            border-radius: 2rem 2rem 2rem 2rem;
-            opacity: 1;
-        }
-    }
 
     .titulo_trabajos {
         font-size: 10rem;

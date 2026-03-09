@@ -7,26 +7,20 @@ import { Card, CardContent } from '@/components/ui/card';
 
 import { trabajoGrafico } from './datos';
 
-import { computed, ref } from 'vue';
+import { listaDetalles } from '@/composables/listaDetalles'
+
+
 import { CircleChevronLeft, CircleChevronRight, } from 'lucide-vue-next';
 
 
-const enPagina = 2
+const {
+  paginaActual,
+  totalPaginas,
+  listaPaginada: listaGrafico,
+  irALaPagina
+} = listaDetalles(trabajoGrafico, 2)
 
-const paginaActual = ref(1)
 
-const totalPaginas = Math.ceil(trabajoGrafico.length / enPagina)
-
-const listaGrafico = computed(() => {
-    const inicio = (paginaActual.value - 1) * enPagina
-    const fin = inicio + enPagina
-    return trabajoGrafico.slice(inicio, fin)
-})
-
-const irALaPagina = (pagina: number) => {
-    if(pagina >= 1 && pagina <= totalPaginas)
-        paginaActual.value = pagina
-}
 
 
 </script>
@@ -94,9 +88,7 @@ const irALaPagina = (pagina: number) => {
 
     </div>
 
-    
-    
-    
+
   </div>
 
 

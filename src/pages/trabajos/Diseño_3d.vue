@@ -5,26 +5,16 @@ import { Card, CardContent } from '@/components/ui/card';
 
 import { Trabajo3d } from './datos';
 
-import { computed, ref } from 'vue';
 import { CircleChevronLeft, CircleChevronRight, } from 'lucide-vue-next';
 
+import { listaDetalles } from '@/composables/listaDetalles'
 
-const enPagina = 2
-
-const paginaActual = ref(1)
-
-const totalPaginas = Math.ceil(Trabajo3d.length / enPagina)
-
-const lista3d = computed(() => {
-    const inicio = (paginaActual.value - 1) * enPagina
-    const fin = inicio + enPagina
-    return Trabajo3d.slice(inicio, fin)
-})
-
-const irALaPagina = (pagina: number) => {
-    if(pagina >= 1 && pagina <= totalPaginas)
-        paginaActual.value = pagina
-}
+const {
+  paginaActual,
+  totalPaginas,
+  listaPaginada: lista3d,
+  irALaPagina
+} = listaDetalles(Trabajo3d, 2)
 
 
 </script>
