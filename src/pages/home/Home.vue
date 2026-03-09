@@ -62,10 +62,10 @@ const fecha = ref<DateValue>()
 
     <div class="overflow-x-hidden">
 
-        <nav class="navegador flex flex-col sm:flex-row justify-between">
+        <nav class="navegador flex flex-row justify-between items-center gap-2 p-1.5 fixed transition-all">
 
                  <NavigationMenu>
-                    <NavigationMenuList class="flex flex-col sm:flex-row">
+                    <NavigationMenuList class="flex flex-row gap-2">
                         
                     <NavigationMenuItem>
                         <a href="#" @click.prevent="scrollToSection('#')">
@@ -102,23 +102,23 @@ const fecha = ref<DateValue>()
                     </NavigationMenuList>
                 </NavigationMenu>
 
-                <div class="nombre">
+                <div class="nombre hidden sm:block">
                     Álex Pérez Hidalgo
                 </div>
         </nav>
 
         <section class="fondo_imagen w-full h-[90vh] min-w-screen min-h-screen">
-           <div 
+           <div
             v-for="logotipo in imagenLogo"
             :key="logotipo.imagen"
             >
                 <img
-                class="imagenLogo" 
+                class="imagenLogo transition-all" 
                 :src="`/imagenes/Home/${ logotipo.imagen }`" 
                 alt="logotipo del Porfolio"
                 >
 
-                <h1 class="fecha fuente">
+                <h1 class="fecha fuente transition-all">
                     2026
                 </h1>
 
@@ -442,37 +442,64 @@ const fecha = ref<DateValue>()
     position: absolute;
     bottom: 40px; 
     left: 5%;
-    width: 40vw; 
-    max-width: 900px; 
+    width: 320px;
     height: auto;
 }
-
-    .imagenLogo {
-        position: absolute;
-        bottom: 40px; 
-        left: 5%;
-        width: 40vw; 
-        max-width: 900px; 
-        height: auto;
-    }   
 
 .fecha {
     color: #d8720b;
     position: absolute;
-    bottom: 3%; 
-    left: 85%;
-    font-size: 75px;
+    bottom: 4%; 
+    right: 5%;
+    font-size: 36px;
     font-weight: bold;
     pointer-events: none;
 }
+
+@media (min-width: 640px) {
+    .imagenLogo {
+        width: 520px;
+    }
+
+    .fecha {
+        font-size: 55px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .imagenLogo {
+        width: 720px;
+    }
+
+    .fecha {
+        font-size: 70px;
+    }
+}
+
+.nombre {
+    color: white;
+    size: 20px;
+
+}
+
+@media (min-width: 640px) {
+    .nombre {
+        color: white;
+        margin-right: 1.5rem;
+    }
+}
+
     .navegador {
-        background-color: blue;
-        opacity: 0.7;
-        position: fixed;
-        top: 0;
-        width: 11rem;
-        border-radius: 0 0 1rem 0;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 2rem 2rem 2rem 2rem;
+        backdrop-filter: blur(0.3rem);
+        opacity: 1;
+        margin-top: 17px;
         z-index: 1;
+        margin-right: 2rem;
+        margin-left: 3rem;
 
     }
 
@@ -490,17 +517,6 @@ const fecha = ref<DateValue>()
         }
     }
 
-    @media (min-width: 640px) {
-        .nombre {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-right: 50px;
-            pointer-events: none;
-            color: white;            
-        }   
-    }
-
     .titulo_trabajos {
         font-size: 10rem;
         font-weight: 500;
@@ -511,16 +527,17 @@ const fecha = ref<DateValue>()
     }
 
     .titulo_info {
-        font-size: 8rem;
-        font-weight: 500;
+        font-size: 8rem;  
         color: white;
         writing-mode:vertical-lr;
         transform: rotate(180deg);
-        margin-top: 5.5rem;
+        margin-top: 6rem;
         pointer-events: none;
         font-family: outfit;
     }
    
+
+
     .card {
         display: flex;
         justify-content: center;
@@ -530,6 +547,7 @@ const fecha = ref<DateValue>()
         position: absolute;
     }
 
+    
     .card_contacto {
         display: flex;
         justify-content: center;
@@ -539,6 +557,26 @@ const fecha = ref<DateValue>()
         width: 125rem;
     }
 
+@media (max-width: 640px) {
+    .titulo_trabajos {
+        order: 2;
+        margin-top: 2rem;
+        text-align: center;
+    }
 
+    .card {
+        order: 1;
+        position: absolute;
+        flex-direction: column;
+        height: auto;
+        gap: 2rem;
+        margin-top: 6rem;
+    }
+
+    #trabajos > div{
+        flex-direction: column;
+        align-items: center;
+    }
+}
   
 </style>
