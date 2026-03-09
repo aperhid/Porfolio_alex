@@ -12,7 +12,7 @@ export const DetallesIlustracion: detallesIlustracion[] = [
    {
         id: 0,
         explicacion: 'En este proyecto real de ilustración narrativa, trabajé en la edición del libro Coraline, creando la portada, contraportada, guardas y diversas ilustraciones internas. Todas las piezas fueron pintadas a mano con gouache, siguiendo una paleta cromática coherente basada en complementarios dobles, lo que permitió mantener armonía y unidad visual a lo largo del libro.\n\nUna vez finalizadas, las ilustraciones fueron escaneadas y editadas digitalmente, ajustando color, contraste y detalles para asegurar fidelidad y consistencia. Finalmente, las integré en mockups para presentar el proyecto de manera profesional.\nEste trabajo combina la técnica tradicional y la edición digital, mostrando cuidado en la narrativa visual, coherencia cromática y atención a cada detalle del libro.',
-        bocetos: [],
+        bocetos: ['ilustracion_boceto_coraline.png', 'ilustracion_boceto_coraline2.png', 'ilustracion_boceto_coraline3.png'],
         proceso: ['ilustracion_proceso_coraline.png', 'ilustracion_proceso_coraline2.png', 'ilustracion_proceso_coraline3.png', 'ilustracion_proceso_coraline4.png'],
         resultado: ['ilustracion_resultado_coraline.png', 'ilustracion_resultado_coraline2.png', 'ilustracion_resultado_coraline3.png', 'ilustracion_resultado_coraline4.png']   
     },

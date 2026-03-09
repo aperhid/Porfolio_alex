@@ -17,7 +17,7 @@ export const DetallesGrafico: detallesGrafico[] = [
     {
         id: 1,
         explicacion: 'En este proyecto se desarrolló una serie de carteles para una obra inventada e inspirada en los pecados capitales, siendo la envidia el pecado escogido. Cada cartel busca capturar la esencia de la envidia a través de elementos visuales como miradas recelosas, tonos verdes, espirales hipnóticas y texturas rasposas.\n\nEl trabajo prestó especial atención a la composición y la retícula, asegurando equilibrio y fuerza visual en cada pieza. La tipografía fue meticulosamente elegida para reforzar la atmósfera de cada cartel, mientras que la combinación de fotografía, texturas digitales yy geometría permitió crear imágenes impactantes, coherentes y envolventes. Todo el protecto fue realizado de manera digital, buscando transmitir de forma poderosa y clara la sensción de envidia a través de cada detalle visual.',
-        bocetos: ['grafico_boceto_envidia.png', 'grafico_boceto_envidia2.png'],
+        bocetos: [],
         proceso: ['grafico_proceso_envidia.png', 'grafico_proceso_envidia2.png', 'grafico_proceso_envidia3.png'],
         resultado: ['grafico_resultado_envidia1.jpg', 'grafico_resultado_envidia2.jpg', 'grafico_resultado_envidia3.jpg']   
     },
@@ -33,6 +33,6 @@ export const DetallesGrafico: detallesGrafico[] = [
         explicacion: 'En este proyecto desarrollé una revista tipográfica centrada en la salud mental de los diseñadores, con un enfoque editorial muy cuidado. La composición fue meticulosa, siguiendo estrictamente las reglas del diseño editorial para lograr un resultado limpio, ordenado y fácil de leer.\n\nEl font pairing fue cuidadosamente seleccionado para transmitir claridad y jerarquía visual, mientras que el uso de una única tinta turquesa en los detalles permitió crear contraste y cohesión sin sobrecargar las páginas. Este proyecto combina tipografía, composición y diseño editorial, mostrando cómo un enfoque minimalista y controlado puede comunicar de manera efectiva un tema sensible y relevante para la comunidad de diseñadores.',
         bocetos: [],
         proceso: ['grafico_proceso_revista.png', 'grafico_proceso_revista5.png', 'grafico_proceso_revista2.png', 'grafico_proceso_revista3.png', 'grafico_proceso_revista4.png'],
-        resultado: ['grafico_resultado_revista.png', 'grafico_resultado_revista5.png', 'grafico_resultado_revista2.png', 'grafico_resultado_revista3.png', 'grafico_resultado_revista4.png']  
+        resultado: ['grafico_resultado_revista1.png', 'grafico_resultado_revista6.png', 'grafico_resultado_revista2.png', 'grafico_resultado_revista3.png', 'grafico_resultado_revista4.png']  
     }
 ]
