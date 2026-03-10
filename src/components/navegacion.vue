@@ -93,4 +93,17 @@ import { scrollToSection } from '@/utils/scrollToSection';
         }
     }
 
+    .nombre {
+    color: white;
+    size: 20px;
+
+}
+
+@media (min-width: 640px) {
+    .nombre {
+        color: white;
+        margin-right: 1.5rem;
+    }
+}
+
 </style>

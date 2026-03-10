@@ -8,7 +8,7 @@ import { trabajoIlustracion } from './datos';
 
 import { CircleChevronLeft, CircleChevronRight, } from 'lucide-vue-next';
 
-import { listaDetalles } from '@/composables/listaDetalles'
+import { listaDetalles } from '@/components/composables/listaDetalles'
 
 const {
   paginaActual,

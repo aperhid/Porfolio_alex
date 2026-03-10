@@ -24,10 +24,10 @@ import navegacion from '@/components/navegacion.vue'
 import popover from '@/components/popover.vue'
 
 
-
 const imagenInformacion = ref('imagen_info2.png')
 
 const listaProgramas = ref(ProgramasInfo)
+
 
 </script>
 
@@ -390,19 +390,6 @@ const listaProgramas = ref(ProgramasInfo)
 
     .fecha {
         font-size: 70px;
-    }
-}
-
-.nombre {
-    color: white;
-    size: 20px;
-
-}
-
-@media (min-width: 640px) {
-    .nombre {
-        color: white;
-        margin-right: 1.5rem;
     }
 }
 

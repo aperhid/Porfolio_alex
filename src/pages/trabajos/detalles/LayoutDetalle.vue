@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { usarCategoriaDetalles } from '@/components/composables/usarCategoriaDetalles';
 import Button from '@/components/ui/button/Button.vue';
 import Card from '@/components/ui/card/Card.vue';
 import CardContent from '@/components/ui/card/CardContent.vue';
@@ -7,37 +8,13 @@ import { useRoute, useRouter } from 'vue-router';
 const route = useRoute()
 const router = useRouter()
 
-
-let categoria = ''
-
-if (route.path.includes('Diseño_3d')) {
-  categoria = '3d'
-}
-
-if (route.path.includes('Diseño_gráfico')) {
-  categoria = 'grafico'
-}
-
-if (route.path.includes('ilustracion')) {
-  categoria = 'ilustracion'
-} 
-
-
-const rutaExplicacion = `detalles-explicacion-${categoria}`
-
-const rutaBocetos = `detalles-bocetos-${categoria}`
-
-const rutaProceso = `detalles-proceso-${categoria}`
-
-const rutaResultado = `detalles-resultado-${categoria}`
-
-
-
-let rutaTrabajos = ''
-
-if (categoria === '3d') rutaTrabajos = 'diseño_3d'
-else if (categoria === 'grafico') rutaTrabajos = 'diseño_gráfico'
-else if (categoria === 'ilustracion') rutaTrabajos = 'ilustracion'
+const {
+  rutaExplicacion,
+  rutaBocetos,
+  rutaProceso,
+  rutaResultado,
+  rutaTrabajos
+} = usarCategoriaDetalles()
 
 
 </script>

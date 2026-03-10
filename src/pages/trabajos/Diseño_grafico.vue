@@ -7,8 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 import { trabajoGrafico } from './datos';
 
-import { listaDetalles } from '@/composables/listaDetalles'
-
+import { listaDetalles } from '@/components/composables/listaDetalles'
 
 import { CircleChevronLeft, CircleChevronRight, } from 'lucide-vue-next';
 
