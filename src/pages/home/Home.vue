@@ -58,50 +58,50 @@ const listaProgramas = ref(ProgramasInfo)
 
         <section id="trabajos">
             <div class="bg-black w-full h-[90vh] lg:min-w-screen lg:min-h-screen flex justify-center">
-                <div class="titulo_trabajos">
+                <div class="titulo_trabajos pointer-events-none transition-all">
                     <h1>
                         Proyectos
                     </h1>  
                 </div>
 
-                <div class="card">
-                    <Card class="w-80 h-110 border border-[rgba(255,255,255,0.4)] bg-gradient-to-br from-[#d8720b]/40 via-black/20 to-[#d8720b]/40 backdrop-blur-sm hover:scale-105 transition-transform">
+                <div class="card gap-8 lg:gap-20">
+                    <Card class="w-70 h-95 lg:w-80 lg:h-110 border border-[rgba(255,255,255,0.4)] bg-gradient-to-br from-[#d8720b]/40 via-black/20 to-[#d8720b]/40 backdrop-blur-sm hover:scale-105 transition-transform">
                         <CardContent class="flex flex-col items-center">
-                            <img class="w-70 h-60 object-cover object-top mt-2 rounded-md"
+                            <img class="lg:w-70 lg:h-60 object-cover object-top mt-2 rounded-md"
                             src="/imagenes/Home/fondo_3d.png" alt="">
-                            <h1 class="mt-9 font-medium text-2xl pointer-events-none text-white">
+                            <h1 class="mt-5 lg:mt-9 font-medium text-xl lg:text-2xl pointer-events-none text-white">
                                 DISEÑO 3D
                             </h1>
                      
                                 <RouterLink to="diseño_3d"> 
-                                    <ArrowUp class="mt-7 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
+                                    <ArrowUp class="mt-5 lg:mt-7 rounded-full text-white size-9 lg:size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
                                 </RouterLink>
                         </CardContent>
                     </Card> 
-                    <Card class="w-80 h-110 border border-[rgba(255,255,255,0.4)] bg-gradient-to-br from-[#d8720b]/40 via-black/20 to-[#d8720b]/40 backdrop-blur-sm hover:scale-105 transition-transform">
+                    <Card class="w-70 h-95 lg:w-80 lg:h-110 border border-[rgba(255,255,255,0.4)] bg-gradient-to-br from-[#d8720b]/40 via-black/20 to-[#d8720b]/40 backdrop-blur-sm hover:scale-105 transition-transform">
                         <CardContent class="flex flex-col items-center">
-                            <img class="w-70 h-60 object-cover object-top mt-2 rounded-md"
+                            <img class="lg:w-70 lg:h-60 object-cover object-top mt-2 rounded-md"
                             src="/imagenes/Home/fondo_grafico.png" alt="">
-                            <h1 class="mt-9 font-medium text-2xl pointer-events-none text-white">
+                            <h1 class="mt-5 lg:mt-9 font-medium text-xl lg:text-2xl pointer-events-none text-white">
                                 DISEÑO GRÁFICO
                             </h1>
                      
                                 <RouterLink to="diseño_gráfico"> 
-                                    <ArrowUp class="mt-7 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
+                                    <ArrowUp class="mt-4 lg:mt-7 rounded-full text-white size-9 lg:size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
                                 </RouterLink>
                         </CardContent>
                     </Card>  
 
-                      <Card class="w-80 h-110 border border-[rgba(255,255,255,0.4)] bg-gradient-to-br from-[#d8720b]/40 via-black/20 to-[#d8720b]/40 backdrop-blur-sm hover:scale-105 transition-transform">
+                      <Card class="w-70 h-95 lg:w-80 lg:h-110 border border-[rgba(255,255,255,0.4)] bg-gradient-to-br from-[#d8720b]/40 via-black/20 to-[#d8720b]/40 backdrop-blur-sm hover:scale-105 transition-transform">
                         <CardContent class="flex flex-col items-center">
-                            <img class="w-70 h-60 object-cover object-top mt-2 rounded-md"
+                            <img class="lg:w-70 lg:h-60  object-cover object-top mt-2 rounded-md"
                             src="/imagenes/Home/fondo_ilustracion.png" alt="">
-                            <h1 class="mt-9 font-medium text-2xl pointer-events-none text-white">
+                            <h1 class="mt-5 lg:mt-9 font-medium text-xl lg:text-2xl pointer-events-none text-white">
                                 ILUSTRACIÓN
                             </h1>
 
                                 <RouterLink to="ilustracion"> 
-                                    <ArrowUp class="mt-7 rounded-full text-white size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
+                                    <ArrowUp class="mt-5 lg:mt-7 rounded-full text-white size-9 lg:size-10 bg-transparent border border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.2)] backdrop-blur-md" />
                                 </RouterLink>
                         </CardContent>
                     </Card>  
@@ -114,24 +114,27 @@ const listaProgramas = ref(ProgramasInfo)
         <section id="información">
             <div class="fondo_imagen2 w-full min-h-screen">
 
-                <div class="flex flex-row justify-center items-center gap-6 h-[110vh] mr-20">
-                    <div class="titulo_info">
+                <div class="flex flex-col lg:flex-row justify-center items-center gap-6 lg:h-[110vh] px-6 lg:mr-20 py-10">
+                    <div class="titulo_info fuente text-7xl md:text-[6rem] lg:text-[8rem] mt-10 pointer-events-none transition-all">
                         Sobre mí
                     </div>
-                    <Card class="w-80 h-150 rounded-r-none border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
-                        <CardContent>
-                             <img 
-                                class="object-cover h-137 w-75" 
-                                :src="`/imagenes/informacion/${ imagenInformacion }`" 
-                                alt=""
-                                @mouseenter="imagenInformacion='imagen_info2.png'"
-                                @mouseleave="imagenInformacion='imagen_info.png'"
-                                >
-                        </CardContent>
-                    </Card>
+
+                    <div class="hidden lg:block">
+                        <Card class="w-50 md:max-w-sm lg:w-80 lg:h-150 rounded-lg lg:rounded-r-none border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                            <CardContent>
+                                <img 
+                                    class="object-cover w-full h-auto lg:h-137 lg:w-75" 
+                                    :src="`/imagenes/informacion/${ imagenInformacion }`" 
+                                    alt=""
+                                    @mouseenter="imagenInformacion='imagen_info2.png'"
+                                    @mouseleave="imagenInformacion='imagen_info.png'"
+                                    >
+                            </CardContent>
+                        </Card>    
+                    </div>
                     
-                    <div class="flex flex-col gap-5">
-                        <Card class="w-150 h-75 rounded-b-none rounded-l-none rounded-tr-3xl border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                    <div class="flex flex-col gap-5 w-full max-w-2xl">
+                        <Card class="w-full lg:w-150 lg:h-75 rounded-b-none lg:rounded-tr-xl lg:rounded-b-none lg:rounded-l-none border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                             <CardContent >
                                 <div class="flex flex-col gap-3">
                                     <p class="text-white pointer-events-none">¡Hola! Soy Álex, estudiante de diseño y un apasionado de todas las ramas artísticas. Ofrezco creatividad, estética y atención al detalle en cada proyecto. </p>
@@ -209,19 +212,19 @@ const listaProgramas = ref(ProgramasInfo)
                             </CardContent>
                         </Card>
 
-                        <Card class="w-150 h-70 rounded-t-none rounded-l-none rounded-br-3xl border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                        <Card class="w-full lg:w-150 lg:h-70 rounded-t-none lg:rounded-br-xl lg:rounded-t-none lg:rounded-l-none border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                             <CardContent>
                                 <div class="grid grid-cols-3 gap-6 py-2 place-items-center">
                                         <div 
-                                        class="flex items-center gap-5 group cursor-default"
+                                        class="flex items-center gap-3 md:gap-5 group cursor-default"
                                         v-for="programas in listaProgramas"
                                         >
-                                            <img class="w-15 h-15 hover:scale-105 rounded-2xl hover:shadow-[0_0_20px_white]"
+                                            <img class="w-13 h-13 md:w-15 md:h-15 hover:scale-105 rounded-2xl hover:shadow-[0_0_20px_white]"
                                             :src="`/imagenes/informacion/${ programas.imagen }`" 
                                             :alt="`${ programas.titulo }`"
                                             >
                                             <span
-                                            class="text-white font-medium opacity-0 group-hover:opacity-100 transition-all"
+                                            class="text-[13px] md:text-[16px] text-white font-medium opacity-0 group-hover:opacity-100 transition-all"
                                             >
                                             {{ programas.nivel }}
                                             </span>
@@ -238,15 +241,15 @@ const listaProgramas = ref(ProgramasInfo)
         </section>
 
         <section id="contacto">
-            <div class="fondo_imagen w-full min-h-screen">
+            <div class="fondo_imagen w-full min-h-screen pt-25">
                 
-                    <h1 class="fuente absolute text-7xl font-bold text-white mt-50 ml-10 pointer-events-none">
+                    <h1 class="fuente lg:absolute text-5xl md:text-6xl lg:text-7xl font-bold text-white lg:mt-10 ml-10 pointer-events-none transition-all">
                         ¿Te interesa...? <br> 
                         ¡Contáctame!
                     </h1>
 
                 <div class="card_contacto">
-                    <Card class="border-3 border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                    <Card class="hidden md:block border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                         <CardContent>
                             <div class="w-full aspect-square">
                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24651.751686028074!2d-0.4990223256836036!3d39.43613130000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6051cf930b3ef3%3A0xa415f9d06eb6b1d4!2sTorrent!5e0!3m2!1ses!2ses!4v1772584451847!5m2!1ses!2ses" 
@@ -260,7 +263,7 @@ const listaProgramas = ref(ProgramasInfo)
                     </Card>
 
                     <div>
-                        <Card class="border-3 border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                        <Card class="border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                             <CardContent>
                                <div>
                                     <form>
@@ -294,7 +297,7 @@ const listaProgramas = ref(ProgramasInfo)
                         </Card>
 
                         <div class="mt-4 flex justify-center">
-                            <Card class="h-10 px-9 rounded-b-full border-3 border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
+                            <Card class="h-10 px-9 rounded-b-full border border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.15)] backdrop-blur-md">
                                 <CardContent class="flex items-center justify-center gap-6 h-full p-0">
       
                                     <a href="https://www.instagram.com/alezzz_____" target="_blank" rel="noopener noreferrer">
@@ -324,7 +327,7 @@ const listaProgramas = ref(ProgramasInfo)
                 </div>
 
                 <div class="w-full flex justify-end items-end">
-                    <h2 class="fuente text-7xl font-bold text-[#d8720b] mr-10 mb-10 pointer-events-none">
+                    <h2 class="fuente text-4xl md:text-6xl lg:text-7xl font-bold text-[#d8720b] mt-10 mr-6 lg:mr-10 mb-6 lg:mb-10 pointer-events-none text-right transition-all">
                         ¡Gracias!
                     </h2>
                 </div>
@@ -338,9 +341,8 @@ const listaProgramas = ref(ProgramasInfo)
 
 <style scoped>
 
-
 .fuente {
-    font-family: outfit;
+    font-family: outfit-SemiBold;
 }
 
 .fondo_imagen {
@@ -352,7 +354,6 @@ const listaProgramas = ref(ProgramasInfo)
     background-image: url(../imagenes/Home/fondoPortada2.jpg);
     background-size: cover;
 }
-
 
 .imagenLogo {
     position: absolute;
@@ -372,6 +373,64 @@ const listaProgramas = ref(ProgramasInfo)
     pointer-events: none;
 }
 
+.titulo_trabajos {
+    font-size: 7rem;
+    font-weight: 500;
+    color: white;
+    margin-top: 28rem;
+}
+
+.titulo_info {  
+    color: white;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 125rem;
+    height: 30rem;
+}
+
+
+@media (max-width: 640px) {
+    .titulo_trabajos {
+        margin-top: 4rem;
+        text-align: center;
+        font-size: 5.5rem;
+    }
+
+    .card {
+        position: static;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+
+    #trabajos > div {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-bottom: 4rem;
+    }
+
+    .card_contacto {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+
 @media (min-width: 640px) {
     .imagenLogo {
         width: 520px;
@@ -379,6 +438,11 @@ const listaProgramas = ref(ProgramasInfo)
 
     .fecha {
         font-size: 55px;
+    }
+
+    .card {
+        position: absolute;
+        height: 43rem;
     }
 }
 
@@ -391,67 +455,26 @@ const listaProgramas = ref(ProgramasInfo)
     .fecha {
         font-size: 70px;
     }
-}
 
     .titulo_trabajos {
         font-size: 10rem;
-        font-weight: 500;
-        color: white;
-        margin-top: 28rem;
-        font-family: outfit;
-        
     }
 
     .titulo_info {
-        font-size: 8rem;  
-        color: white;
-        writing-mode:vertical-lr;
+        writing-mode: vertical-lr;
         transform: rotate(180deg);
-        margin-top: 6rem;
-        pointer-events: none;
-        font-family: outfit;
+        margin-top: 7rem;
+        margin-left: 4rem;
     }
-   
+}
 
 
-    .card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 43rem;
-        gap: 5rem;
-        position: absolute;
-    }
-
-    
+@media (max-width: 1024px) {
     .card_contacto {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50rem;
-        gap: 2rem;
-        width: 125rem;
-    }
-
-@media (max-width: 640px) {
-    .titulo_trabajos {
-        order: 2;
-        margin-top: 2rem;
-        text-align: center;
-    }
-
-    .card {
-        order: 1;
-        position: absolute;
-        flex-direction: column;
+        width: 100%;
         height: auto;
-        gap: 2rem;
-        margin-top: 6rem;
-    }
-
-    #trabajos > div{
-        flex-direction: column;
-        align-items: center;
+        padding: 1rem;
+        margin-top: 2rem;
     }
 }
   

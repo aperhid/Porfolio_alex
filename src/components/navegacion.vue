@@ -96,6 +96,7 @@ import { scrollToSection } from '@/utils/scrollToSection';
     .nombre {
     color: white;
     size: 20px;
+    pointer-events: none;
 
 }
 
